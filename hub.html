@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Private command center for Mila Boyd. Not for public viewing.">
+
+  <title>Hub · Private · Mila Boyd</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="css/portfolio.css" rel="stylesheet">
+
+  <style>
+    /* Hub specific layout. Denser than public pages.
+       Inherits all tokens from portfolio.css. */
+    body{ background: var(--espresso); color: var(--cream); }
+
+    .hub-bar{
+      background: var(--espresso);
+      border-bottom: 1px solid var(--gold-soft);
+      padding: var(--s-2) 0;
+    }
+    .hub-bar .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--s-3);
+      flex-wrap: wrap;
+    }
+    .hub-bar .brand{
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--cream);
+    }
+    .hub-bar .meta{
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .hub-hero{
+      padding: var(--s-6) 0 var(--s-4);
+      border-bottom: 1px solid var(--gold-soft);
+    }
+    .hub-hero h1{
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      color: var(--cream);
+      margin-bottom: var(--s-2);
+    }
+    .hub-hero h1 em{ color: var(--rose); }
+    .hub-hero p{ color: var(--cream-soft); max-width: 640px; }
+
+    .hub-grid{
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: var(--s-3);
+      padding: var(--s-5) 0 var(--s-7);
+    }
+    @media (max-width: 980px){ .hub-grid{ grid-template-columns: repeat(6, 1fr); } }
+    @media (max-width: 600px){ .hub-grid{ grid-template-columns: 1fr; } }
+
+    .module{
+      background: rgba(243, 235, 221, 0.03);
+      border: 1px solid var(--gold-soft);
+      border-radius: var(--r-soft);
+      padding: var(--s-3);
+    }
+    .module h3{
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--rose);
+      margin-bottom: var(--s-2);
+    }
+    .module .label{
+      font-family: 'Inter', sans-serif;
+      font-size: 0.66rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      display: block;
+      margin-bottom: var(--s-1);
+    }
+    .module ul{ list-style: none; padding: 0; margin: 0; }
+    .module li{
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--gold-soft);
+      color: var(--cream-soft);
+      font-size: 0.92rem;
+    }
+    .module li:last-child{ border-bottom: 0; }
+    .module a{ color: var(--rose); }
+    .module a:hover{ color: var(--gold); }
+
+    .module.span-3{ grid-column: span 3; }
+    .module.span-4{ grid-column: span 4; }
+    .module.span-6{ grid-column: span 6; }
+    .module.span-8{ grid-column: span 8; }
+    .module.span-12{ grid-column: span 12; }
+    @media (max-width: 980px){
+      .module.span-3, .module.span-4{ grid-column: span 3; }
+      .module.span-6, .module.span-8{ grid-column: span 6; }
+    }
+    @media (max-width: 600px){
+      .module[class*="span-"]{ grid-column: 1; }
+    }
+
+    .quick-links{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: var(--s-2);
+    }
+    .quick-links a{
+      display: block;
+      padding: var(--s-2);
+      background: rgba(243, 235, 221, 0.04);
+      border: 1px solid var(--gold-soft);
+      border-radius: var(--r-soft);
+      color: var(--cream);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      transition: all .25s var(--ease);
+    }
+    .quick-links a:hover{
+      background: var(--gold-soft);
+      color: var(--cream);
+      transform: translateY(-2px);
+    }
+    .quick-links a .ql-label{
+      display: block;
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .tracker{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+    .tracker th, .tracker td{
+      text-align: left;
+      padding: 0.6rem 0.5rem;
+      border-bottom: 1px solid var(--gold-soft);
+    }
+    .tracker th{
+      font-family: 'Inter', sans-serif;
+      font-size: 0.66rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .tracker td{ color: var(--cream); }
+    .pill{
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.66rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 0.3rem 0.7rem;
+      border-radius: var(--r-pill);
+      border: 1px solid var(--gold-soft);
+    }
+    .pill.live{ color: var(--rose); border-color: var(--rose); }
+    .pill.review{ color: var(--gold); border-color: var(--gold); }
+    .pill.idea{ color: var(--cream-soft); }
+    .pill.done{ color: var(--forest); border-color: var(--gold); background: var(--gold-soft); }
+
+    .check li{
+      display: flex;
+      gap: var(--s-2);
+      align-items: flex-start;
+    }
+    .check li::before{
+      content: "○";
+      color: var(--gold);
+      font-size: 1rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+    .check li.done::before{ content: "●"; }
+    .check li.done{ color: var(--cream-mute); text-decoration: line-through; text-decoration-color: var(--gold-soft); }
+
+    .metric-block{
+      text-align: center;
+      padding: var(--s-3) 0;
+    }
+    .metric-block .v{
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--rose);
+      display: block;
+      line-height: 1;
+    }
+    .metric-block .k{
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      display: block;
+      margin-top: var(--s-1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HUB BAR ============ -->
+  <header class="hub-bar">
+    <div class="container">
+      <div class="brand">Mila Boyd · Hub</div>
+      <span class="meta">Private · Not Indexed</span>
+    </div>
+  </header>
+
+  <!-- ============ HUB HERO ============ -->
+  <section class="hub-hero">
+    <div class="container">
+      <h1>Today is for <em>quiet, careful work.</em></h1>
+      <p>Your command center. Live work, leads, ideas, tasks, and the small operating system that holds the studio together. Edit this page directly to keep it current.</p>
+    </div>
+  </section>
+
+  <!-- ============ HUB GRID ============ -->
+  <section>
+    <div class="container">
+      <div class="hub-grid">
+
+        <!-- 01 · QUICK LINKS (span-12) -->
+        <article class="module span-12">
+          <span class="label">01 · Quick Links</span>
+          <h3>Where everything lives.</h3>
+          <div class="quick-links">
+            <a href="index.html"><span class="ql-label">Public</span>Home</a>
+            <a href="work.html"><span class="ql-label">Public</span>Work Hub</a>
+            <a href="services.html"><span class="ql-label">Public</span>Services</a>
+            <a href="roots.html"><span class="ql-label">Public</span>Roots</a>
+            <a href="book.html"><span class="ql-label">Public</span>Book a Call</a>
+            <a href="experience.html"><span class="ql-label">Private</span>Experience</a>
+            <a href="logo-explorations.html"><span class="ql-label">Private</span>Logo Drafts</a>
+            <a href="https://github.com/milaboyd1991/milaboyd1991.github.io"><span class="ql-label">GitHub</span>Portfolio Repo</a>
+            <a href="https://github.com/milaboyd1991/mila-ecosystem"><span class="ql-label">GitHub</span>Ecosystem Repo</a>
+            <a href="https://milaaboyd.pierceadvancedux.com/"><span class="ql-label">Pierce</span>School Mirror</a>
+          </div>
+        </article>
+
+        <!-- 02 · PROJECT TRACKER (span-8) -->
+        <article class="module span-8">
+          <span class="label">02 · Project Tracker</span>
+          <h3>Active engagements.</h3>
+          <table class="tracker">
+            <thead>
+              <tr>
+                <th>Project</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Next step</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PNW Floor Design App</td>
+                <td>UX / UI</td>
+                <td><span class="pill live">Live</span></td>
+                <td>Add usability testing notes</td>
+              </tr>
+              <tr>
+                <td>Lacey Legacy case study</td>
+                <td>Brand</td>
+                <td><span class="pill review">Polish</span></td>
+                <td>Replace stock images with originals</td>
+              </tr>
+              <tr>
+                <td>Growth Story</td>
+                <td>Personal</td>
+                <td><span class="pill live">Live</span></td>
+                <td>Add June 17 graduation photo</td>
+              </tr>
+              <tr>
+                <td>PNW Floor Design business site</td>
+                <td>Brand · Web</td>
+                <td><span class="pill idea">Planned</span></td>
+                <td>Separate site after portfolio is shipped</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+
+        <!-- 03 · METRICS (span-4) -->
+        <article class="module span-4">
+          <span class="label">03 · Metrics</span>
+          <h3>Quick read.</h3>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-2);">
+            <div class="metric-block"><span class="v">2</span><span class="k">Live sites</span></div>
+            <div class="metric-block"><span class="v">3</span><span class="k">Case studies</span></div>
+            <div class="metric-block"><span class="v">0</span><span class="k">Open leads</span></div>
+            <div class="metric-block"><span class="v">—</span><span class="k">Analytics</span></div>
+          </div>
+        </article>
+
+        <!-- 04 · LEADS (span-6) -->
+        <article class="module span-6">
+          <span class="label">04 · Client Leads</span>
+          <h3>Follow ups.</h3>
+          <table class="tracker">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Last touch</th>
+                <th>Next action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="3" style="color: var(--cream-mute); padding: var(--s-3) 0;">
+                  No active leads yet. Add as inquiries come in through the book form.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+
+        <!-- 05 · CONTENT IDEAS (span-6) -->
+        <article class="module span-6">
+          <span class="label">05 · Content Ideas</span>
+          <h3>Drafts and hooks.</h3>
+          <ul>
+            <li>A short essay on why restraint reads as care</li>
+            <li>Process documentation: choosing a tile that compounds for ten years</li>
+            <li>YouTube intro video for the studio launch</li>
+            <li>Newsletter sequence on calm under pressure for designers</li>
+            <li>Instagram series: material in light, ten quiet posts</li>
+          </ul>
+        </article>
+
+        <!-- 06 · PORTFOLIO UPDATES (span-6) -->
+        <article class="module span-6">
+          <span class="label">06 · Portfolio Updates</span>
+          <h3>Needs attention.</h3>
+          <ul>
+            <li>Add real client testimonials to home and testimonials page</li>
+            <li>Replace placeholder images on identity, type, color study cards</li>
+            <li>Build remaining individual case study pages</li>
+            <li>Add a real headshot to roots</li>
+            <li>Hook insights up to a real blog list (Markdown or hand built)</li>
+          </ul>
+        </article>
+
+        <!-- 07 · BUSINESS GOALS (span-6) -->
+        <article class="module span-6">
+          <span class="label">07 · Business Goals</span>
+          <h3>Quarterly direction.</h3>
+          <ul>
+            <li><strong>Q2 2026:</strong> Graduate, launch the new portfolio, book first paid premium client</li>
+            <li><strong>Q3 2026:</strong> Build PNW Floor Design business site, launch YouTube channel</li>
+            <li><strong>Q4 2026:</strong> Three signed clients across UX, brand, and interior</li>
+            <li><strong>2027:</strong> Hire first part time collaborator, ship first product</li>
+          </ul>
+        </article>
+
+        <!-- 08 · TASKS (span-6) -->
+        <article class="module span-6">
+          <span class="label">08 · This Week</span>
+          <h3>Daily tasks.</h3>
+          <ul class="check">
+            <li class="done">Ship new portfolio design system</li>
+            <li class="done">Build home, roots, services, work hub</li>
+            <li>Replace placeholder images across case studies</li>
+            <li>Write first real testimonial outreach to past clients</li>
+            <li>Set up email forwarding to studio@</li>
+            <li>Draft first insight post for launch week</li>
+          </ul>
+        </article>
+
+        <!-- 09 · SITE MAINTENANCE (span-6) -->
+        <article class="module span-6">
+          <span class="label">09 · Site Maintenance</span>
+          <h3>Open items.</h3>
+          <ul>
+            <li>Add favicon and Open Graph image for social shares</li>
+            <li>Configure custom domain on GitHub Pages</li>
+            <li>Hook up analytics (Plausible or Fathom)</li>
+            <li>Run a Lighthouse audit on home and work hub</li>
+            <li>Add 404 page in the studio voice</li>
+          </ul>
+        </article>
+
+        <!-- 10 · SOCIAL & REACH (span-6) -->
+        <article class="module span-6">
+          <span class="label">10 · Social &amp; Reach</span>
+          <h3>Connected accounts.</h3>
+          <ul>
+            <li>Email: <a href="mailto:MilaBoyd1991@gmail.com">MilaBoyd1991@gmail.com</a></li>
+            <li>GitHub: <a href="https://github.com/milaboyd1991">github.com/milaboyd1991</a></li>
+            <li>Instagram: <em>add handle</em></li>
+            <li>LinkedIn: <em>add handle</em></li>
+            <li>YouTube: <em>launching</em></li>
+            <li>School mirror: <a href="https://milaaboyd.pierceadvancedux.com/">milaaboyd.pierceadvancedux.com</a></li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

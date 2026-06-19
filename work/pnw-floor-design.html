@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="PNW Floor Design app case study. Mobile consultation, project tracking, and home visualization platform. Research, personas, sitemap, moodboard, and high fidelity flow by Mila Boyd.">
+
+  <title>PNW Floor Design · Case Study · Mila Boyd</title>
+
+  <link rel="canonical" href="https://milaboyd1991.github.io/work/pnw-floor-design.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="../css/portfolio.css" rel="stylesheet">
+
+  <style>
+    .meta-strip{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--s-3);
+      padding: var(--s-4) 0;
+      border-top: 1px solid var(--espresso-hair);
+      border-bottom: 1px solid var(--espresso-hair);
+      margin-bottom: var(--s-6);
+    }
+    @media (max-width: 720px){ .meta-strip{ grid-template-columns: repeat(2, 1fr); } }
+    .meta-strip dt{
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: var(--s-1);
+    }
+    .meta-strip dd{ margin: 0; color: var(--espresso); }
+    .persona{
+      background: var(--cream);
+      border: 1px solid var(--espresso-hair);
+      border-radius: var(--r-soft);
+      padding: var(--s-4);
+    }
+    .persona .name{
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      color: var(--espresso);
+      margin-bottom: var(--s-1);
+    }
+    .persona .role{
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: var(--s-3);
+    }
+    .persona dl{ margin: 0; }
+    .persona dt{
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-top: var(--s-2);
+    }
+    .persona dd{ margin: 0; color: var(--espresso); font-size: 0.95rem; }
+    .sitemap-list{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: screens;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--s-2);
+    }
+    .sitemap-list li{
+      counter-increment: screens;
+      padding: var(--s-3);
+      border: 1px solid var(--espresso-hair);
+      border-radius: var(--r-soft);
+      background: var(--cream);
+    }
+    .sitemap-list li::before{
+      content: counter(screens, decimal-leading-zero);
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      margin-bottom: var(--s-1);
+      font-weight: 600;
+    }
+    .sitemap-list li strong{
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .sitemap-list li span{ font-size: 0.9rem; color: var(--espresso-soft); }
+    .swatches{ display: flex; flex-wrap: wrap; gap: var(--s-2); margin: var(--s-3) 0; }
+    .swatch{
+      width: 92px; height: 92px;
+      border-radius: var(--r-soft);
+      border: 1px solid var(--espresso-hair);
+      display: flex;
+      align-items: flex-end;
+      padding: var(--s-1);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+    .competitor{
+      background: var(--cream);
+      border: 1px solid var(--espresso-hair);
+      border-radius: var(--r-soft);
+      padding: var(--s-3);
+    }
+    .competitor h3{
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      color: var(--espresso);
+      margin-bottom: var(--s-2);
+    }
+    .competitor p{ font-size: 0.92rem; margin-bottom: var(--s-1); }
+    .pro::before{ content: "+ "; color: var(--forest); font-weight: 700; }
+    .con::before{ content: "− "; color: var(--gold); font-weight: 700; }
+    .iframe-wrap{
+      background: var(--cream);
+      border: 1px solid var(--espresso-hair);
+      border-radius: var(--r-soft);
+      padding: var(--s-3);
+      margin-top: var(--s-4);
+    }
+    .iframe-wrap iframe{
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: var(--r-soft);
+      background: #fff;
+    }
+    .iframe-wrap img{
+      width: 100%;
+      max-height: 700px;
+      object-fit: contain;
+      border-radius: var(--r-soft);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a class="nav-brand" href="../index.html">Mila Boyd</a>
+      <ul class="nav-links">
+        <li><a href="../work.html" class="active">Work</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../process.html">Process</a></li>
+        <li><a href="../roots.html">Roots</a></li>
+        <li><a href="../insights.html">Insights</a></li>
+      </ul>
+      <a class="nav-cta" href="../book.html">Book a Call</a>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="container">
+      <p style="margin-bottom: var(--s-2);"><a href="../work.html" style="font-family:'Inter',sans-serif; font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; color: var(--gold);">← All Work</a></p>
+      <span class="eyebrow">Case Study · UX / UI</span>
+      <h1>PNW Floor Design <em>App.</em></h1>
+      <p class="lead">
+        A mobile platform for smart consultation, project tracking, and home visualization. Designed for an audience that does not want a long form, just clear next steps.
+      </p>
+    </div>
+  </header>
+
+  <!-- ============ META ============ -->
+  <section>
+    <div class="container">
+      <dl class="meta-strip">
+        <div><dt>Role</dt><dd>Product Designer<br>Research through wireframe</dd></div>
+        <div><dt>Type</dt><dd>Capstone UX project</dd></div>
+        <div><dt>Tools</dt><dd>Figma · HTML · CSS</dd></div>
+        <div><dt>Year</dt><dd>2026</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="eyebrow">01 · Problem</span>
+          <h2>Remodeling is overwhelming.</h2>
+          <p>Homeowners cannot visualize how a tile will live in their actual room, do not understand the steps involved, and end up managing communication across multiple contractors. Most existing apps cover one piece of that, not the whole journey.</p>
+        </div>
+        <div>
+          <span class="eyebrow">02 · Solution</span>
+          <h2>One guided workflow.</h2>
+          <p>A platform where users visualize materials with AR, book consultations, track project timelines, manage invoices, communicate with their designer, and control compatible heated floor systems. A seamless renovation experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPETITIVE ANALYSIS ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>The market gap.</h2>
+        <span class="meta">Three competitors, one open lane</span>
+      </div>
+      <div class="grid-3">
+        <div class="competitor">
+          <h3>Houzz</h3>
+          <p class="pro">Large photo library and strong inspiration boards.</p>
+          <p class="con">Too broad. No personal designer connection.</p>
+        </div>
+        <div class="competitor">
+          <h3>Floor &amp; Decor</h3>
+          <p class="pro">Product browsing, store locator, helpful filters.</p>
+          <p class="con">No AR. No project tracking. No personal guidance.</p>
+        </div>
+        <div class="competitor">
+          <h3>Home Depot</h3>
+          <p class="pro">Huge inventory and basic AR.</p>
+          <p class="con">Impersonal. Not design focused. No scheduling.</p>
+        </div>
+      </div>
+      <blockquote style="margin-top: var(--s-4);">
+        None of these apps combine a personalized designer client workflow with smart home compatibility. PNW Floor Design fills that gap.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============ PERSONAS ============ -->
+  <section class="section section-forest">
+    <div class="container">
+      <div class="section-head">
+        <h2>Who I designed for.</h2>
+        <span class="meta">Two primary personas</span>
+      </div>
+      <div class="grid-2">
+        <div class="persona">
+          <div class="name">Grace Clark</div>
+          <div class="role">The Busy Homeowner</div>
+          <dl>
+            <dt>Age</dt><dd>48</dd>
+            <dt>Location</dt><dd>Tacoma · Gig Harbor</dd>
+            <dt>Income</dt><dd>$120K+</dd>
+            <dt>Needs</dt><dd>Clear direction, fast decisions, reassurance.</dd>
+            <dt>Pains</dt><dd>Overwhelmed with choices, forgets deadlines, miscommunication.</dd>
+          </dl>
+        </div>
+        <div class="persona">
+          <div class="name">Cameron Clark</div>
+          <div class="role">The First Time Renovator</div>
+          <dl>
+            <dt>Age</dt><dd>28</dd>
+            <dt>Location</dt><dd>Bremerton</dd>
+            <dt>Income</dt><dd>$65K</dd>
+            <dt>Needs</dt><dd>Simple, modern, clear instructions.</dd>
+            <dt>Pains</dt><dd>Does not understand materials, budgets, or installation.</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SITEMAP ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Sitemap. Ten screens.</h2>
+        <span class="meta">Information architecture</span>
+      </div>
+      <ul class="sitemap-list">
+        <li><strong>Onboarding</strong><span>Login or quick start</span></li>
+        <li><strong>Home Dashboard</strong><span>Active projects, shortcuts</span></li>
+        <li><strong>Material Library</strong><span>Tile, wood, carpet</span></li>
+        <li><strong>AR Visualization</strong><span>Live preview in your room</span></li>
+        <li><strong>Book Consultation</strong><span>Calendar and time picker</span></li>
+        <li><strong>Project Timeline</strong><span>Quotes, approvals, install</span></li>
+        <li><strong>Chat with Designer</strong><span>Direct line, transparent</span></li>
+        <li><strong>Invoices &amp; Payments</strong><span>Track and pay in app</span></li>
+        <li><strong>Heated Floor Control</strong><span>Smart home integration</span></li>
+        <li><strong>Profile &amp; Settings</strong><span>Account and preferences</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ MOODBOARD ============ -->
+  <section class="section section-espresso">
+    <div class="container">
+      <div class="section-head">
+        <h2>Visual direction.</h2>
+        <span class="meta">Pacific Northwest, modern minimalist</span>
+      </div>
+      <p>Forest green, charcoal, mist grey, muted blush. Modern minimalist UI inspired by Apple Home, Nest, and Alexa. Clean whitespace, soft shadows, rounded corners. Overall tone: luxury, nature, clarity.</p>
+      <div class="swatches">
+        <div class="swatch" style="background:#2F4536; color:#fff;">#2F4536</div>
+        <div class="swatch" style="background:#3A3A3A; color:#fff;">#3A3A3A</div>
+        <div class="swatch" style="background:#C9CCC9; color:#1F1A14;">#C9CCC9</div>
+        <div class="swatch" style="background:#F2D6CB; color:#1F1A14;">#F2D6CB</div>
+        <div class="swatch" style="background:#FFFAF6; color:#1F1A14;">#FFFAF6</div>
+        <div class="swatch" style="background:#9DAB86; color:#fff;">#9DAB86</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DELIVERABLES ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Deliverables.</h2>
+        <span class="meta">Brief, sitemap, wireframes</span>
+      </div>
+
+      <div class="iframe-wrap">
+        <p style="margin-bottom: var(--s-2);"><strong>Creative Brief.</strong> Audience, goals, brand voice, and product strategy.</p>
+        <iframe src="../images/creativebrife.pdf" title="PNW Creative Brief"></iframe>
+      </div>
+
+      <div class="iframe-wrap">
+        <p style="margin-bottom: var(--s-2);"><strong>Sitemap diagram.</strong> How users move through the app.</p>
+        <img src="../images/web.PNG" alt="Sitemap diagram for PNW Floor Design app">
+      </div>
+
+      <div class="iframe-wrap">
+        <p style="margin-bottom: var(--s-2);"><strong>App screens.</strong> Wireframe set across all ten screens.</p>
+        <iframe src="../images/app.pdf" title="PNW App Screens"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA CLOSE ============ -->
+  <section class="cta-close">
+    <div class="container-prose">
+      <span class="eyebrow">Next</span>
+      <h2>Want a project like this?</h2>
+      <p class="lead">A short call, an honest brief, and a clear next step.</p>
+      <a href="../book.html" class="btn btn-primary">Book a Call</a>
+      <a href="../work.html" class="btn btn-secondary" style="margin-left: 0.5rem;">More Work</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <div class="brand-block">Mila Boyd</div>
+        <p style="color: var(--cream-soft); margin: 0; max-width: 320px;">Rooted design and considered systems. Based in the Pacific Northwest.</p>
+      </div>
+      <div>
+        <h5>Studio</h5>
+        <ul>
+          <li><a href="../work.html">Work</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../process.html">Process</a></li>
+          <li><a href="../pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>About</h5>
+        <ul>
+          <li><a href="../roots.html">Roots</a></li>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../testimonials.html">Testimonials</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Reach</h5>
+        <ul>
+          <li><a href="../book.html">Book a Call</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="mailto:MilaBoyd1991@gmail.com">MilaBoyd1991@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="legal">
+        <span>© Mila Boyd 2026. All rights reserved.</span>
+        <span>Pacific Northwest</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js" defer></script>
+</body>
+</html>

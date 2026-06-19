@@ -5,101 +5,168 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="keywords" content="designer, UX/UI designer, visual designer, photographer, portfolio">
-  <meta name="description" content="Contact page for a creative design portfolio.">
+  <meta name="description" content="Contact Mila Boyd. Email, location, languages, response time, and the fastest way to reach the studio.">
 
-  <title>Contact | Mila Boyd</title>
+  <title>Contact · Mila Boyd</title>
 
-  <!-- Bootstrap -->
-  <link href="css/bootstrap-5.3.8.css" rel="stylesheet">
+  <link rel="canonical" href="https://milaboyd1991.github.io/contact.html">
 
-  <!-- Material Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Custom CSS -->
-  <link href="css/portfolio.css" rel="stylesheet" type="text/css">
+  <link href="css/portfolio.css" rel="stylesheet">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Serif+Pro&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <style>
+    .contact-grid{
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: var(--s-5);
+      padding: var(--s-6) 0;
+    }
+    @media (max-width: 820px){ .contact-grid{ grid-template-columns: 1fr; } }
+    .contact-card{
+      border-top: 1px solid var(--espresso-hair);
+      padding: var(--s-3) 0;
+    }
+    .contact-card .label{
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      display: block;
+      margin-bottom: var(--s-1);
+    }
+    .contact-card a.email{
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      color: var(--forest);
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 0.2rem;
+    }
+    .contact-card a.email:hover{ color: var(--gold); border-bottom-color: var(--forest); }
+    .contact-card p{ color: var(--espresso); }
+  </style>
 </head>
+<body>
 
-<body data-nav="fixed">
-
-  <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-custom">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Mila Boyd</a>
-      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        MENU
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="uxui.html">Case Studies</a></li>
-          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+  <nav class="nav">
+    <div class="container">
+      <a class="nav-brand" href="index.html">Mila Boyd</a>
+      <ul class="nav-links">
+        <li><a href="work.html">Work</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="roots.html">Roots</a></li>
+        <li><a href="insights.html">Insights</a></li>
+      </ul>
+      <a class="nav-cta" href="book.html">Book a Call</a>
     </div>
   </nav>
 
-  <!-- Main Container -->
-  <main class="container-fluid">
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Contact</span>
+      <h1>The fastest way in <em>is email.</em></h1>
+      <p class="lead">
+        Share a few sentences about the work, the timeline, and the world you want it to live in. I respond within two business days.
+      </p>
+    </div>
+  </header>
 
-    <!-- Header -->
-    <header class="row mt-5 mb-4">
-      <div class="col-12 text-center contact_head">
-        <h1>Contact</h1>
-        <p>Let’s create something thoughtful, beautiful, and memorable.</p>
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <div class="contact-card">
+            <span class="label">Email</span>
+            <a class="email" href="mailto:MilaBoyd1991@gmail.com">MilaBoyd1991@gmail.com</a>
+            <p style="margin-top: var(--s-2);">For most inquiries, email is the fastest path. Include a short brief and timeline if you have one.</p>
+          </div>
+          <div class="contact-card">
+            <span class="label">Book a Call</span>
+            <p>For projects ready to start, the <a href="book.html" style="font-weight: 600;">inquiry form</a> includes scope and budget questions that move us straight to a scheduled call.</p>
+            <a href="book.html" class="btn btn-primary" style="margin-top: var(--s-2);">Open the Form</a>
+          </div>
+          <div class="contact-card">
+            <span class="label">Studio location</span>
+            <p>Pacific Northwest. Most work runs remote. In person sessions for site visits across Washington and the surrounding region.</p>
+          </div>
+        </div>
+        <div>
+          <div class="contact-card">
+            <span class="label">Response time</span>
+            <p>Within two business days. Mondays through Thursdays.</p>
+          </div>
+          <div class="contact-card">
+            <span class="label">Studio hours</span>
+            <p>Monday to Friday<br>By appointment</p>
+          </div>
+          <div class="contact-card">
+            <span class="label">Languages</span>
+            <p>English &amp; Arabic</p>
+          </div>
+          <div class="contact-card">
+            <span class="label">Booking window</span>
+            <p>One quarter ahead. New projects typically start four to eight weeks after the first call.</p>
+          </div>
+        </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section class="row justify-content-center align-items-center my-5 gx-5">
+  <section class="cta-close section-forest" style="border: 0;">
+    <div class="container-prose">
+      <span class="eyebrow">Begin</span>
+      <h2>Send the inquiry.</h2>
+      <p class="lead" style="color: var(--cream);">A short call is the only commitment. The rest of the process unfolds from there.</p>
+      <a href="book.html" class="btn btn-primary">Book a Call</a>
+      <a href="mailto:MilaBoyd1991@gmail.com" class="btn btn-secondary" style="margin-left: 0.5rem;">Email Directly</a>
+    </div>
+  </section>
 
-<!-- Image Column -->
-<div class="col-md-5 col-xl-4 text-center contact_side mb-4">
-  <div class="contact_photo_frame">
-    <img src="images-backup-before-batch-1/banner.png" class="contact_photo" alt="Portrait of Mila Boyd">
-  </div>
-</div>
-     
-
-      <!-- Contact Info Column -->
-      <div class="col-md-5 col-xl-4 contact_info">
-        <h2>Let’s Connect</h2>
-        <p>I would love to hear from you about design, creative projects, portfolio work, or collaboration opportunities.</p>
-
-        <h4>
-          <i class="fas fa-envelope-open"></i>&nbsp;&nbsp;
-          <a href="mailto:MilaBoyd1991@gmail.com">MilaBoyd1991@gmail.com</a>
-        </h4>
-
-        <h4>
-          <i class="fas fa-phone-square"></i>&nbsp;&nbsp;
-          <a href="tel:2533869101">253-386-9101</a>
-        </h4>
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <div class="brand-block">Mila Boyd</div>
+        <p style="color: var(--cream-soft); margin: 0; max-width: 320px;">Rooted design and considered systems. Based in the Pacific Northwest.</p>
       </div>
-
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="text-center mt-5 py-4">
-    <p>&copy; 2026 Mila Boyd</p>
+      <div>
+        <h5>Studio</h5>
+        <ul>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>About</h5>
+        <ul>
+          <li><a href="roots.html">Roots</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Reach</h5>
+        <ul>
+          <li><a href="book.html">Book a Call</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:MilaBoyd1991@gmail.com">MilaBoyd1991@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="legal">
+        <span>© Mila Boyd 2026. All rights reserved.</span>
+        <span>Pacific Northwest</span>
+      </div>
+    </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="js/popper-2.11.8.min.js"></script>
-  <script src="js/bootstrap-5.3.8.js"></script>
-  <script src="js/translate.js" defer></script>
-
+  <script src="js/nav.js" defer></script>
 </body>
 </html>

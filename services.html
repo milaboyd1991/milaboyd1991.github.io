@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Services at the Mila Boyd studio. Interior and flooring consulting, UX/UI and service design, brand and visual systems, creative business strategy. For founders and small studios who want considered work.">
+
+  <title>Services · Mila Boyd</title>
+
+  <link rel="canonical" href="https://milaboyd1991.github.io/services.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="css/portfolio.css" rel="stylesheet">
+
+  <style>
+    /* Page-local layout for the service detail rows.
+       No new colors or fonts. Inherits everything from portfolio.css. */
+    .service-row{
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: var(--s-5);
+      padding: var(--s-6) 0;
+      border-top: 1px solid var(--espresso-hair);
+      align-items: start;
+    }
+    .service-row:last-of-type{ border-bottom: 1px solid var(--espresso-hair); }
+    @media (max-width: 820px){
+      .service-row{ grid-template-columns: 1fr; gap: var(--s-3); padding: var(--s-5) 0; }
+    }
+    .service-row .left h2{
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      margin-bottom: var(--s-2);
+    }
+    .service-row .tag{
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      display: block;
+      margin-bottom: var(--s-2);
+    }
+    .service-row .right ul{
+      padding: 0;
+      list-style: none;
+      margin: 0 0 var(--s-3);
+    }
+    .service-row .right li{
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--espresso-hair);
+      display: flex;
+      gap: var(--s-2);
+    }
+    .service-row .right li::before{
+      content: "—";
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .service-row .right .label{
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin: var(--s-3) 0 var(--s-1);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a class="nav-brand" href="index.html">Mila Boyd</a>
+      <ul class="nav-links">
+        <li><a href="work.html">Work</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="roots.html">Roots</a></li>
+        <li><a href="insights.html">Insights</a></li>
+      </ul>
+      <a class="nav-cta" href="book.html">Book a Call</a>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Services</span>
+      <h1>Four practices. <em>One studio.</em></h1>
+      <p class="lead">
+        The studio takes a small number of clients each quarter so every project gets the time it deserves. Each service is a complete engagement with clear scope, deliverables, and a calm path from brief to handoff.
+      </p>
+      <div class="cta-row">
+        <a href="book.html" class="btn btn-primary">Book a Call</a>
+        <a href="pricing.html" class="btn btn-secondary">See Pricing</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ 01 · INTERIOR + FLOORING ============ -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="service-row">
+        <div class="left">
+          <span class="tag">01 · Interior</span>
+          <h2>Interior &amp; Flooring Consulting</h2>
+          <p>Premium kitchen, bath, and remodel design. Material, light, and feel chosen with a designer's eye and ten years of field experience inside flooring showrooms, on job sites, and across high value projects.</p>
+          <p>For homeowners, contractors, and developers who want the small material decisions handled by someone who has lived inside them.</p>
+        </div>
+        <div class="right">
+          <span class="label">What's included</span>
+          <ul>
+            <li>Material specification across flooring, tile, stone, and finishes</li>
+            <li>Space planning and finish schedules</li>
+            <li>Vendor sourcing and order coordination</li>
+            <li>On site walkthroughs and installation review</li>
+            <li>Light project management for the design phase</li>
+          </ul>
+          <span class="label">Best fit</span>
+          <p>Kitchen and bath remodels, full home interiors, premium new construction, and contractors who want a designer on call for client facing decisions.</p>
+          <a href="book.html" class="btn btn-soft" style="margin-top: var(--s-2);">Start a Project</a>
+        </div>
+      </div>
+
+      <!-- ============ 02 · UX / UI ============ -->
+      <div class="service-row">
+        <div class="left">
+          <span class="tag">02 · Product</span>
+          <h2>UX / UI &amp; Service Design</h2>
+          <p>Product design that respects the user, the business, and the small decisions that compound. Research, IA, design systems, and shipped interface work. I treat a product like a remodel. Plan it once. Build it right. Maintain the system.</p>
+          <p>For founders, small product teams, and studios who want a calm partner from research through delivery.</p>
+        </div>
+        <div class="right">
+          <span class="label">What's included</span>
+          <ul>
+            <li>User research and persona work</li>
+            <li>Information architecture and sitemap</li>
+            <li>Wireframes through high fidelity in Figma</li>
+            <li>Custom design system, not generic components</li>
+            <li>Developer handoff with documentation</li>
+          </ul>
+          <span class="label">Best fit</span>
+          <p>Mobile and web products at any stage. Especially strong for service businesses, home improvement platforms, and tools that bridge physical and digital experience.</p>
+          <a href="book.html" class="btn btn-soft" style="margin-top: var(--s-2);">Start a Project</a>
+        </div>
+      </div>
+
+      <!-- ============ 03 · BRAND ============ -->
+      <div class="service-row">
+        <div class="left">
+          <span class="tag">03 · Brand</span>
+          <h2>Brand &amp; Visual Systems</h2>
+          <p>Identity systems, type, color, and layout that read premium on every surface. Not a logo. A complete language for a business to use. Built around restraint and the rules that make it scale without losing the feeling.</p>
+          <p>For founders ready to stop looking like everyone else in their market.</p>
+        </div>
+        <div class="right">
+          <span class="label">What's included</span>
+          <ul>
+            <li>Brand strategy and positioning</li>
+            <li>Logo system, type, and color palette</li>
+            <li>Guidelines document the team can actually use</li>
+            <li>Launch assets across print, web, and social</li>
+            <li>One round of post launch refinement</li>
+          </ul>
+          <span class="label">Best fit</span>
+          <p>Service businesses, hospitality, design and construction firms, and founders who want a brand that quietly says premium without trying too hard.</p>
+          <a href="book.html" class="btn btn-soft" style="margin-top: var(--s-2);">Start a Project</a>
+        </div>
+      </div>
+
+      <!-- ============ 04 · STRATEGY ============ -->
+      <div class="service-row">
+        <div class="left">
+          <span class="tag">04 · Strategy</span>
+          <h2>Creative Business Strategy</h2>
+          <p>Clarity on offers, pricing, and positioning for founders who want a brand that lasts. Direct, structured sessions that translate creative work into a business that supports the studio long term.</p>
+          <p>For solo founders and small teams who feel scattered across offers and want a calm structure for the next year.</p>
+        </div>
+        <div class="right">
+          <span class="label">What's included</span>
+          <ul>
+            <li>Offer and service architecture</li>
+            <li>Pricing model and packages</li>
+            <li>Client journey and onboarding</li>
+            <li>Brand voice and sales copy</li>
+            <li>Ninety day execution plan with a clear next step</li>
+          </ul>
+          <span class="label">Best fit</span>
+          <p>Designers, contractors, service founders, and small studios at the point where the work is good and the business is what needs the design.</p>
+          <a href="book.html" class="btn btn-soft" style="margin-top: var(--s-2);">Start a Project</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ HOW WE WORK ============ -->
+  <section class="section section-forest">
+    <div class="container">
+      <div class="section-head">
+        <h2>How the studio works.</h2>
+        <span class="meta">A calm engagement</span>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <span class="card-num">Honest scope</span>
+          <h3>Said up front.</h3>
+          <p>Every engagement starts with a written brief and a fixed scope. No mystery, no creep. If the project shifts, we agree on the change together.</p>
+        </div>
+        <div class="card">
+          <span class="card-num">Direct access</span>
+          <h3>One designer.</h3>
+          <p>You work directly with me. No account manager, no junior pass off. The person reading your brief is the person making the design decisions.</p>
+        </div>
+        <div class="card">
+          <span class="card-num">Quiet rhythm</span>
+          <h3>Weekly cadence.</h3>
+          <p>Weekly check ins, written decisions, calm progress. Most clients describe the engagement as the least stressful design partnership they have had.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA CLOSE ============ -->
+  <section class="cta-close">
+    <div class="container-prose">
+      <span class="eyebrow">Begin</span>
+      <h2>Tell me about the work.</h2>
+      <p class="lead">
+        A short call, an honest brief, and a clear next step. I respond within two business days.
+      </p>
+      <a href="book.html" class="btn btn-primary">Book a Call</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <div class="brand-block">Mila Boyd</div>
+        <p style="color: var(--cream-soft); margin: 0; max-width: 320px;">Rooted design and considered systems. Based in the Pacific Northwest.</p>
+      </div>
+      <div>
+        <h5>Studio</h5>
+        <ul>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>About</h5>
+        <ul>
+          <li><a href="roots.html">Roots</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Reach</h5>
+        <ul>
+          <li><a href="book.html">Book a Call</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:MilaBoyd1991@gmail.com">MilaBoyd1991@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="legal">
+        <span>© Mila Boyd 2026. All rights reserved.</span>
+        <span>Pacific Northwest</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+</body>
+</html>

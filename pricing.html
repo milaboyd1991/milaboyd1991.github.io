@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Studio pricing for Mila Boyd. Transparent packages for interior, UX/UI, brand, and creative business strategy.">
+
+  <title>Pricing · Mila Boyd</title>
+
+  <link rel="canonical" href="https://milaboyd1991.github.io/pricing.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="css/portfolio.css" rel="stylesheet">
+
+  <style>
+    .price-grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--s-3);
+      padding: var(--s-5) 0;
+    }
+    @media (max-width: 900px){ .price-grid{ grid-template-columns: 1fr; } }
+    .price{
+      background: var(--cream);
+      border: 1px solid var(--espresso-hair);
+      border-radius: var(--r-soft);
+      padding: var(--s-4);
+      display: flex;
+      flex-direction: column;
+    }
+    .price.feature{
+      border-color: var(--gold);
+      background: var(--cream);
+    }
+    .price .tag{
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: var(--s-1);
+    }
+    .price h3{
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.6rem;
+      color: var(--forest);
+      margin-bottom: var(--s-2);
+    }
+    .price .amount{
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      color: var(--espresso);
+      margin-bottom: var(--s-1);
+    }
+    .price .amount small{
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      font-weight: 600;
+      display: block;
+      margin-top: 0.2rem;
+    }
+    .price p.summary{
+      color: var(--espresso-soft);
+      margin-bottom: var(--s-3);
+      min-height: 4.5rem;
+    }
+    .price ul{
+      list-style: none;
+      padding: 0;
+      margin: 0 0 var(--s-3);
+      flex: 1;
+    }
+    .price li{
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--espresso-hair);
+      display: flex;
+      gap: var(--s-2);
+      font-size: 0.9rem;
+    }
+    .price li::before{ content: "—"; color: var(--gold); flex-shrink: 0; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a class="nav-brand" href="index.html">Mila Boyd</a>
+      <ul class="nav-links">
+        <li><a href="work.html">Work</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="roots.html">Roots</a></li>
+        <li><a href="insights.html">Insights</a></li>
+      </ul>
+      <a class="nav-cta" href="book.html">Book a Call</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Pricing</span>
+      <h1>Honest numbers. <em>No mystery.</em></h1>
+      <p class="lead">
+        Every engagement has a written scope and a fixed investment. Three starting tiers below. Most clients land in the middle. Custom work is quoted after the first call.
+      </p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="price-grid">
+
+        <div class="price">
+          <span class="tag">01 · Strategy Session</span>
+          <h3>The Conversation.</h3>
+          <div class="amount">$750<small>One time · 90 minutes</small></div>
+          <p class="summary">A focused single session for founders who need clarity on a decision before committing to a larger project.</p>
+          <ul>
+            <li>Ninety minute strategy call</li>
+            <li>One page written recap with recommendations</li>
+            <li>Honest answer on whether the studio is the right fit</li>
+            <li>Credit toward a full engagement within sixty days</li>
+          </ul>
+          <a href="book.html" class="btn btn-secondary">Book a Session</a>
+        </div>
+
+        <div class="price feature">
+          <span class="tag">02 · Focused Engagement</span>
+          <h3>The Studio Standard.</h3>
+          <div class="amount">$4K to $12K<small>Six to ten weeks</small></div>
+          <p class="summary">The most common engagement. A complete brand, product, or interior project from brief to handoff.</p>
+          <ul>
+            <li>Discover, Define, Design, Deliver process</li>
+            <li>Weekly review sessions with written notes</li>
+            <li>One round of refinement after the first full draft</li>
+            <li>Final assets, mini guideline, and thirty day support</li>
+          </ul>
+          <a href="book.html" class="btn btn-primary">Start a Project</a>
+        </div>
+
+        <div class="price">
+          <span class="tag">03 · Full Build</span>
+          <h3>The Long Engagement.</h3>
+          <div class="amount">From $18K<small>Three to six months</small></div>
+          <p class="summary">For complex projects across multiple disciplines or large remodels where the design phase needs to lead and support construction.</p>
+          <ul>
+            <li>Multi phase scope with milestone payments</li>
+            <li>Dedicated weekly access and on call support</li>
+            <li>On site visits where the project requires it</li>
+            <li>Extended ninety day support window</li>
+          </ul>
+          <a href="book.html" class="btn btn-secondary">Inquire</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-forest">
+    <div class="container">
+      <div class="section-head">
+        <h2>How payment works.</h2>
+        <span class="meta">Plain terms</span>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <span class="card-num">Deposit</span>
+          <h3>Fifty percent up front.</h3>
+          <p>A signed agreement and the first half secures the studio start date. The remainder is paid on handoff or split across milestones for longer engagements.</p>
+        </div>
+        <div class="card">
+          <span class="card-num">Methods</span>
+          <h3>Card, bank, or wire.</h3>
+          <p>Invoices are sent through standard accounting tools. International clients pay by wire. No crypto, no third party escrow.</p>
+        </div>
+        <div class="card">
+          <span class="card-num">Refunds</span>
+          <h3>Pro rata, in writing.</h3>
+          <p>If we end an engagement early, the unused portion is refunded pro rata. The studio commits the same honest accounting to itself that it commits to clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-close">
+    <div class="container-prose">
+      <span class="eyebrow">Begin</span>
+      <h2>Not sure where you fit?</h2>
+      <p class="lead">A short call usually answers that in five minutes. No pressure, no proposal yet.</p>
+      <a href="book.html" class="btn btn-primary">Book a Call</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <div class="brand-block">Mila Boyd</div>
+        <p style="color: var(--cream-soft); margin: 0; max-width: 320px;">Rooted design and considered systems. Based in the Pacific Northwest.</p>
+      </div>
+      <div>
+        <h5>Studio</h5>
+        <ul>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>About</h5>
+        <ul>
+          <li><a href="roots.html">Roots</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Reach</h5>
+        <ul>
+          <li><a href="book.html">Book a Call</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:MilaBoyd1991@gmail.com">MilaBoyd1991@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="legal">
+        <span>© Mila Boyd 2026. All rights reserved.</span>
+        <span>Pacific Northwest</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+</body>
+</html>
