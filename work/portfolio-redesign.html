@@ -77,7 +77,7 @@
   <!-- ============ COVER ============ -->
   <header class="hero">
     <div class="container">
-      <p style="margin-bottom: var(--s-2);"><a href="../work.html" style="font-family:'Inter',sans-serif; font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; color: var(--gold);">&larr; All Work</a></p>
+      <a class="back-link" href="../work.html">&larr; All Work</a>
       <span class="eyebrow">Case Study · UX/UI · Service Design · Creative Strategy</span>
       <h1>Portfolio Redesign Journey. <em>From academic project to professional studio platform.</em></h1>
       <p class="lead">
@@ -89,11 +89,11 @@
   <!-- ============ META STRIP ============ -->
   <section>
     <div class="container">
-      <dl style="display:grid; grid-template-columns:repeat(4,1fr); gap:var(--s-3); padding:var(--s-4) 0; border-top:1px solid var(--espresso-hair); border-bottom:1px solid var(--espresso-hair); margin-bottom:var(--s-6);">
-        <div><dt style="font-family:'Inter',sans-serif; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:var(--s-1);">Role</dt><dd style="margin:0;">Designer, Developer, Author</dd></div>
-        <div><dt style="font-family:'Inter',sans-serif; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:var(--s-1);">Type</dt><dd style="margin:0;">Personal · Studio Platform</dd></div>
-        <div><dt style="font-family:'Inter',sans-serif; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:var(--s-1);">Stack</dt><dd style="margin:0;">HTML, CSS, JSON-LD, GitHub Pages</dd></div>
-        <div><dt style="font-family:'Inter',sans-serif; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:var(--s-1);">Year</dt><dd style="margin:0;">2026</dd></div>
+      <dl class="meta-strip">
+        <div><dt>Role</dt><dd>Designer, Developer, Author</dd></div>
+        <div><dt>Type</dt><dd>Personal · Studio Platform</dd></div>
+        <div><dt>Stack</dt><dd>HTML, CSS, JSON-LD, GitHub Pages</dd></div>
+        <div><dt>Year</dt><dd>2026</dd></div>
       </dl>
     </div>
   </section>
@@ -255,8 +255,10 @@
       <span class="eyebrow">Next</span>
       <h2>Want a system like this for your studio?</h2>
       <p class="lead">A short call, an honest brief, and a clear next step.</p>
-      <a href="../book.html" class="btn btn-primary">Book a Call</a>
-      <a href="../work.html" class="btn btn-secondary" style="margin-left: 0.5rem;">More Work</a>
+      <div class="cta-row">
+        <a href="../book.html" class="btn btn-primary">Book a Call</a>
+        <a href="../work.html" class="btn btn-secondary">More Work</a>
+      </div>
     </div>
   </section>
 
@@ -265,7 +267,7 @@
     <div class="container">
       <div>
         <div class="brand-block">Mila Boyd</div>
-        <p style="color: var(--cream-soft); margin: 0; max-width: 320px;">Rooted design and considered systems. Based in the Pacific Northwest.</p>
+        <p class="footer-tagline">Rooted design and considered systems. Based in the Pacific Northwest.</p>
       </div>
       <div>
         <h5>Studio</h5>

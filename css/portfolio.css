@@ -371,7 +371,9 @@ hr.rule{
 .hero{ padding: var(--s-7) 0 var(--s-6); }
 .hero h1{ margin-bottom: var(--s-4); max-width: 14ch; }
 .hero .lead{ margin-bottom: var(--s-5); }
-.hero .cta-row{ display: flex; gap: var(--s-2); flex-wrap: wrap; }
+
+/* Button group, global */
+.cta-row{ display: flex; gap: var(--s-2); flex-wrap: wrap; }
 
 /* ---------- 8. Grids + cards ---------- */
 .grid-4{ display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-3); }
@@ -833,3 +835,49 @@ hr.rule{
 .cta-close{ text-align: center; padding: var(--s-7) 0; }
 .cta-close h2{ font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--s-3); }
 .cta-close .lead{ margin: 0 auto var(--s-4); }
+.cta-close .cta-row{ justify-content: center; }
+
+/* ---------- 14. Case study utilities ---------- */
+/* Back link used on every individual case study and category page */
+.back-link{
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--s-3);
+  font-weight: 600;
+}
+.back-link:hover{ color: var(--forest); }
+
+/* 4-column Role/Type/Stack/Year strip below case study hero */
+.meta-strip{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s-3);
+  padding: var(--s-4) 0;
+  border-top: 1px solid var(--espresso-hair);
+  border-bottom: 1px solid var(--espresso-hair);
+  margin-bottom: var(--s-6);
+}
+@media (max-width: 720px){
+  .meta-strip{ grid-template-columns: repeat(2, 1fr); gap: var(--s-2); }
+}
+.meta-strip dt{
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: var(--s-1);
+}
+.meta-strip dd{ margin: 0; }
+
+/* Footer brand tagline repeated on every page */
+.site-footer .footer-tagline{
+  color: var(--cream-soft);
+  margin: 0;
+  max-width: 320px;
+}

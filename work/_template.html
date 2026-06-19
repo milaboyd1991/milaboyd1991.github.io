@@ -102,7 +102,7 @@
   <!-- ============ 01 · COVER ============ -->
   <header class="hero">
     <div class="container">
-      <p style="margin-bottom: var(--s-2);"><a href="../work.html" style="font-family:'Inter',sans-serif; font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; color: var(--gold);">&larr; All Work</a></p>
+      <a class="back-link" href="../work.html">&larr; All Work</a>
       <!-- TODO: practice area + project name -->
       <span class="eyebrow">Case Study · TODO Practice Area</span>
       <h1>TODO Project Name. <em>TODO short tagline.</em></h1>
@@ -115,11 +115,11 @@
   <!-- ============ 02 · META STRIP ============ -->
   <section>
     <div class="container">
-      <dl style="display:grid; grid-template-columns:repeat(4,1fr); gap:var(--s-3); padding:var(--s-4) 0; border-top:1px solid var(--espresso-hair); border-bottom:1px solid var(--espresso-hair); margin-bottom:var(--s-6);">
-        <div><dt style="font-family:'Inter',sans-serif; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:var(--s-1);">Role</dt><dd style="margin:0;">TODO</dd></div>
-        <div><dt style="font-family:'Inter',sans-serif; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:var(--s-1);">Type</dt><dd style="margin:0;">TODO</dd></div>
-        <div><dt style="font-family:'Inter',sans-serif; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:var(--s-1);">Tools</dt><dd style="margin:0;">TODO</dd></div>
-        <div><dt style="font-family:'Inter',sans-serif; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:var(--s-1);">Year</dt><dd style="margin:0;">TODO</dd></div>
+      <dl class="meta-strip">
+        <div><dt>Role</dt><dd>TODO</dd></div>
+        <div><dt>Type</dt><dd>TODO</dd></div>
+        <div><dt>Tools</dt><dd>TODO</dd></div>
+        <div><dt>Year</dt><dd>TODO</dd></div>
       </dl>
     </div>
   </section>
@@ -277,8 +277,10 @@
       <span class="eyebrow">Next</span>
       <h2>Need a project like this?</h2>
       <p class="lead">A short call, an honest brief, and a clear next step.</p>
-      <a href="../book.html" class="btn btn-primary">Book a Call</a>
-      <a href="../work.html" class="btn btn-secondary" style="margin-left: 0.5rem;">More Work</a>
+      <div class="cta-row">
+        <a href="../book.html" class="btn btn-primary">Book a Call</a>
+        <a href="../work.html" class="btn btn-secondary">More Work</a>
+      </div>
     </div>
   </section>
 
@@ -287,7 +289,7 @@
     <div class="container">
       <div>
         <div class="brand-block">Mila Boyd</div>
-        <p style="color: var(--cream-soft); margin: 0; max-width: 320px;">Rooted design and considered systems. Based in the Pacific Northwest.</p>
+        <p class="footer-tagline">Rooted design and considered systems. Based in the Pacific Northwest.</p>
       </div>
       <div>
         <h5>Studio</h5>

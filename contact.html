@@ -105,6 +105,8 @@
     }
     .contact-card a.email:hover{ color: var(--gold); border-bottom-color: var(--forest); }
     .contact-card p{ color: var(--espresso); }
+    .follow-list{ line-height: 2; }
+    .follow-list a{ font-weight: 600; }
   </style>
   <!-- Google Analytics 4 placeholder. Replace G-XXXXXXXXXX with your real measurement ID and uncomment.
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -185,11 +187,11 @@
 
           <div class="contact-card">
             <span class="label">Follow</span>
-            <p style="line-height: 2;">
-              <a href="https://www.linkedin.com/in/mila-boyd-301765385/" rel="me noopener" target="_blank" style="font-weight: 600;">LinkedIn</a><br>
-              <a href="https://www.instagram.com/mila.boyd.design/" rel="me noopener" target="_blank" style="font-weight: 600;">Instagram</a><br>
-              <a href="https://www.youtube.com/@pnw-floor-design-llc" rel="me noopener" target="_blank" style="font-weight: 600;">YouTube</a><br>
-              <a href="https://www.facebook.com/mila.boyd.974231" rel="me noopener" target="_blank" style="font-weight: 600;">Facebook</a>
+            <p class="follow-list">
+              <a href="https://www.linkedin.com/in/mila-boyd-301765385/" rel="me noopener" target="_blank">LinkedIn</a><br>
+              <a href="https://www.instagram.com/mila.boyd.design/" rel="me noopener" target="_blank">Instagram</a><br>
+              <a href="https://www.youtube.com/@pnw-floor-design-llc" rel="me noopener" target="_blank">YouTube</a><br>
+              <a href="https://www.facebook.com/mila.boyd.974231" rel="me noopener" target="_blank">Facebook</a>
             </p>
           </div>
         </div>
@@ -197,13 +199,15 @@
     </div>
   </section>
 
-  <section class="cta-close section-forest" style="border: 0;">
+  <section class="cta-close section-forest">
     <div class="container-prose">
       <span class="eyebrow">Begin</span>
       <h2>Send the inquiry.</h2>
-      <p class="lead" style="color: var(--cream);">A short call is the only commitment. The rest of the process unfolds from there.</p>
-      <a href="book.html" class="btn btn-primary">Book a Call</a>
-      <a href="mailto:MilaBoyd1991@gmail.com" class="btn btn-secondary" style="margin-left: 0.5rem;">Email Directly</a>
+      <p class="lead">A short call is the only commitment. The rest of the process unfolds from there.</p>
+      <div class="cta-row">
+        <a href="book.html" class="btn btn-primary">Book a Call</a>
+        <a href="mailto:MilaBoyd1991@gmail.com" class="btn btn-secondary">Email Directly</a>
+      </div>
     </div>
   </section>
 
@@ -211,7 +215,7 @@
     <div class="container">
       <div>
         <div class="brand-block">Mila Boyd</div>
-        <p style="color: var(--cream-soft); margin: 0; max-width: 320px;">Rooted design and considered systems. Based in the Pacific Northwest.</p>
+        <p class="footer-tagline">Rooted design and considered systems. Based in the Pacific Northwest.</p>
       </div>
       <div>
         <h5>Studio</h5>
