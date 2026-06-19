@@ -514,6 +514,37 @@ hr.rule{
 .site-footer li{ margin-bottom: var(--s-1); }
 .site-footer a{ color: var(--cream-soft); letter-spacing: 0.04em; }
 .site-footer a:hover{ color: var(--gold); }
+.site-footer .social-row{
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--gold-soft);
+  padding-top: var(--s-3);
+  margin-top: var(--s-3);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  font-size: 0.85rem;
+}
+.site-footer .social-row .label{
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+.site-footer .social-row a{
+  color: var(--cream);
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color .25s var(--ease), border-color .25s var(--ease);
+}
+.site-footer .social-row a:hover{
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
 .site-footer .legal{
   grid-column: 1 / -1;
   border-top: 1px solid var(--gold-soft);
@@ -524,6 +555,68 @@ hr.rule{
   color: var(--cream-mute);
   font-size: 0.78rem;
   letter-spacing: 0.08em;
+}
+
+.credibility-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-3);
+  margin: var(--s-4) 0;
+}
+@media (max-width: 980px){ .credibility-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px){ .credibility-grid{ grid-template-columns: 1fr; } }
+.cred-card{
+  background: rgba(243, 235, 221, 0.04);
+  border: 1px solid var(--gold-soft);
+  border-radius: var(--r-soft);
+  padding: var(--s-3);
+}
+.section-forest .cred-card,
+.section-espresso .cred-card{
+  background: rgba(243, 235, 221, 0.04);
+  border-color: var(--gold-soft);
+}
+.cred-card .num{
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  display: block;
+  margin-bottom: var(--s-1);
+}
+.cred-card h3{
+  font-family: 'Cormorant Garamond', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-bottom: var(--s-2);
+}
+.cred-card p{ font-size: 0.92rem; margin: 0; }
+
+.role-line{
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--gold);
+  margin: var(--s-3) 0 var(--s-4);
+  line-height: 1.5;
+  max-width: 720px;
+}
+.section-forest .role-line, .section-espresso .role-line{ color: var(--rose); }
+
+.recognized-strip{
+  text-align: center;
+  padding: var(--s-5) 0;
+  border-top: 1px solid var(--espresso-hair);
+  border-bottom: 1px solid var(--espresso-hair);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
 }
 
 /* ---------- 11. Roots statement block ---------- */
