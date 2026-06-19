@@ -41,6 +41,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://milaboyd1991.github.io/work/flooring-interior.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://milaboyd1991.github.io/work/uxui-portfolio.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://milaboyd1991.github.io/work/service-design.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://milaboyd1991.github.io/work/customer-experience.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://milaboyd1991.github.io/pricing.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

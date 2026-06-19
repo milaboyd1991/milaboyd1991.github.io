@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-label="Portrait of Mila Boyd, coming soon">
+  <defs>
+    <linearGradient id="cream-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F3EBDD"/>
+      <stop offset="100%" stop-color="#E8DCC6"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#cream-grad)"/>
+
+  <rect x="40" y="40" width="120" height="2" fill="#B89263"/>
+  <rect x="40" y="40" width="2" height="120" fill="#B89263"/>
+  <rect x="440" y="758" width="120" height="2" fill="#B89263"/>
+  <rect x="558" y="640" width="2" height="120" fill="#B89263"/>
+
+  <g transform="translate(300 380)" text-anchor="middle">
+    <text font-family="'Cormorant Garamond', 'Times New Roman', serif" font-style="italic" font-size="44" fill="#2D3F2C">
+      Portrait of Mila Boyd
+    </text>
+    <text y="60" font-family="'Inter', sans-serif" font-weight="600" font-size="14" letter-spacing="6" fill="#B89263">
+      COMING  SOON
+    </text>
+    <line x1="-60" y1="100" x2="60" y2="100" stroke="#B89263" stroke-width="1"/>
+    <text y="140" font-family="'Cormorant Garamond', serif" font-style="italic" font-size="18" fill="#1F1A14" opacity="0.65">
+      Professional photography in progress.
+    </text>
+  </g>
+</svg>

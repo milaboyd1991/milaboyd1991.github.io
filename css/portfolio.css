@@ -619,6 +619,114 @@ hr.rule{
   font-weight: 600;
 }
 
+/* Portrait slots, placeholder ready */
+.hero-two-col{
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--s-5);
+  align-items: center;
+  padding: var(--s-7) 0 var(--s-6);
+}
+@media (max-width: 980px){ .hero-two-col{ grid-template-columns: 1fr; gap: var(--s-3); padding: var(--s-6) 0 var(--s-5); } }
+.hero-two-col .portrait{
+  border-radius: var(--r-soft);
+  overflow: hidden;
+  background: var(--cream);
+  border: 1px solid var(--gold-soft);
+  aspect-ratio: 3 / 4;
+}
+.hero-two-col .portrait img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.story-image{
+  border-radius: var(--r-soft);
+  overflow: hidden;
+  background: var(--forest);
+  border: 1px solid var(--gold-soft);
+  aspect-ratio: 4 / 3;
+  margin: var(--s-4) 0;
+}
+.story-image img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.profile-image{
+  border-radius: var(--r-soft);
+  overflow: hidden;
+  background: var(--cream);
+  border: 1px solid var(--gold-soft);
+  aspect-ratio: 1 / 1;
+  max-width: 280px;
+}
+.profile-image img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Practice area cards for /work hub */
+.practice-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s-3);
+}
+@media (max-width: 720px){ .practice-grid{ grid-template-columns: 1fr; } }
+.practice-card{
+  display: block;
+  padding: var(--s-4);
+  border: 1px solid var(--espresso-hair);
+  border-radius: var(--r-soft);
+  background: rgba(243, 235, 221, 0.04);
+  color: var(--espresso);
+  text-decoration: none;
+  transition: all .25s var(--ease);
+}
+.practice-card:hover{
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  color: var(--espresso);
+}
+.practice-card .pa-num{
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  display: block;
+  margin-bottom: var(--s-2);
+}
+.practice-card h3{
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--forest);
+  margin-bottom: var(--s-2);
+}
+.practice-card p{ color: var(--espresso-soft); margin: 0; font-size: 0.95rem; }
+.practice-card .status{
+  display: inline-block;
+  margin-top: var(--s-2);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--gold-soft);
+  border-radius: var(--r-pill);
+}
+
+/* Coming-soon hero status pill */
+.status-pill{
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold);
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--gold);
+  border-radius: var(--r-pill);
+  margin-bottom: var(--s-3);
+}
+
 /* ---------- 11. Roots statement block ---------- */
 .roots-statement{
   text-align: center;

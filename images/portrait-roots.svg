@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Roots story image, coming soon">
+  <defs>
+    <linearGradient id="forest-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2D3F2C"/>
+      <stop offset="100%" stop-color="#1F1A14"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#forest-grad)"/>
+
+  <rect x="40" y="40" width="140" height="1.5" fill="#B89263"/>
+  <rect x="40" y="40" width="1.5" height="140" fill="#B89263"/>
+  <rect x="620" y="558.5" width="140" height="1.5" fill="#B89263"/>
+  <rect x="758.5" y="420" width="1.5" height="140" fill="#B89263"/>
+
+  <g transform="translate(400 270)" text-anchor="middle">
+    <text font-family="'Inter', sans-serif" font-weight="600" font-size="13" letter-spacing="6" fill="#B89263">
+      ROOTS  AND  VISION
+    </text>
+    <text y="60" font-family="'Cormorant Garamond', 'Times New Roman', serif" font-style="italic" font-size="46" fill="#F3EBDD">
+      Story image, in progress
+    </text>
+    <line x1="-60" y1="100" x2="60" y2="100" stroke="#B89263" stroke-width="1"/>
+    <text y="140" font-family="'Cormorant Garamond', serif" font-style="italic" font-size="18" fill="#F3EBDD" opacity="0.72">
+      Professional photography being scheduled.
+    </text>
+  </g>
+</svg>
