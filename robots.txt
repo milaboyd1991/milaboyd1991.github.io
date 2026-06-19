@@ -1,7 +1,34 @@
 User-agent: *
 Allow: /
+
+# Private system pages (noindex)
 Disallow: /hub.html
 Disallow: /experience.html
 Disallow: /logo-explorations.html
+
+# Orphaned legacy files (outside Roots & Light system, pending review)
+Disallow: /05_Website_Command_Center.html
+Disallow: /about.html
+Disallow: /bridge5.html
+Disallow: /Bridge5_Business_Command_Center_Modern.html
+Disallow: /Bridge5_PNW_Business_Command_Center_v5.html
+Disallow: /bridge5-product-research.html
+Disallow: /bridge5-scoring-matrix.html
+Disallow: /build-case-study.html
+Disallow: /business.html
+Disallow: /design.html
+Disallow: /discovery-journal.html
+Disallow: /ecosystem-dashboard.html
+Disallow: /flooring-case-study.html
+Disallow: /graphic_design.html
+Disallow: /growth-case-study.html
+Disallow: /Mila%20Boyd_Final%20Portfolio.html
+Disallow: /photography.html
+Disallow: /pnw-floor-design.html
+Disallow: /pnw-quote-form.html
+Disallow: /pnw-website-build.html
+Disallow: /portfolio.html
+Disallow: /resume.html
+Disallow: /uxui.html
 
 Sitemap: https://milaboyd1991.github.io/sitemap.xml
