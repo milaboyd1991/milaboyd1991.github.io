@@ -11,6 +11,20 @@
 
   <link rel="canonical" href="https://milaboyd1991.github.io/book.html">
 
+  <meta property="og:site_name" content="Mila Boyd Studio">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://milaboyd1991.github.io/book.html">
+  <meta property="og:title" content="Book a Call · Mila Boyd Studio">
+  <meta property="og:description" content="Tell me the shape of the work. A short call, an honest brief, and a clear next step. Two business day response.">
+  <meta property="og:image" content="https://milaboyd1991.github.io/images/og-card.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Book a Call · Mila Boyd Studio">
+  <meta name="twitter:description" content="A short call, an honest brief, a clear next step.">
+  <meta name="twitter:image" content="https://milaboyd1991.github.io/images/og-card.svg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -174,27 +188,39 @@
           </div>
         </div>
 
-        <form class="inquiry" id="inquiryForm">
+        <div id="successPanel" style="display: none; padding: var(--s-4); background: var(--cream); border: 1px solid var(--gold); border-radius: var(--r-soft);">
+          <span class="eyebrow" style="color: var(--gold);">Received</span>
+          <h2 style="margin-bottom: var(--s-2);">Thank you. <em>The brief is in.</em></h2>
+          <p>I have received your inquiry and will respond within two business days. If anything is urgent, email <a href="mailto:MilaBoyd1991@gmail.com" style="color: var(--forest); font-weight: 600;">MilaBoyd1991@gmail.com</a> directly.</p>
+        </div>
+
+        <form class="inquiry" id="inquiryForm"
+              action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+              method="POST">
+          <input type="hidden" name="_subject" value="New inquiry from milaboyd1991.github.io">
+          <input type="hidden" name="_next" value="https://milaboyd1991.github.io/book.html?sent=ok">
+          <input type="text" name="_gotcha" style="display: none;" tabindex="-1" autocomplete="off">
+
           <div class="row-2">
             <div class="row">
               <label for="name">Your name</label>
-              <input type="text" id="name" required>
+              <input type="text" id="name" name="name" required>
             </div>
             <div class="row">
               <label for="email">Email</label>
-              <input type="email" id="email" required>
+              <input type="email" id="email" name="email" required>
             </div>
           </div>
 
           <div class="row">
             <label for="company">Company or project name (optional)</label>
-            <input type="text" id="company">
+            <input type="text" id="company" name="company">
           </div>
 
           <div class="row-2">
             <div class="row">
               <label for="type">Project type</label>
-              <select id="type" required>
+              <select id="type" name="project_type" required>
                 <option value="">Choose one</option>
                 <option>Interior &amp; Flooring</option>
                 <option>UX / UI &amp; Service Design</option>
@@ -205,7 +231,7 @@
             </div>
             <div class="row">
               <label for="budget">Budget range</label>
-              <select id="budget" required>
+              <select id="budget" name="budget" required>
                 <option value="">Choose one</option>
                 <option>Under $5K</option>
                 <option>$5K to $15K</option>
@@ -218,7 +244,7 @@
 
           <div class="row">
             <label for="timeline">Timeline</label>
-            <select id="timeline" required>
+            <select id="timeline" name="timeline" required>
               <option value="">Choose one</option>
               <option>This month</option>
               <option>Next one to three months</option>
@@ -229,10 +255,14 @@
 
           <div class="row">
             <label for="brief">Project brief</label>
-            <textarea id="brief" placeholder="A few honest sentences about the work, the audience, and what you would like the outcome to be."></textarea>
+            <textarea id="brief" name="brief" placeholder="A few honest sentences about the work, the audience, and what you would like the outcome to be."></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--s-2);">Send Inquiry</button>
+
+          <p style="font-size: 0.78rem; color: var(--espresso-mute); margin-top: var(--s-3); text-align: center;">
+            Or write directly to <a href="mailto:MilaBoyd1991@gmail.com" style="color: var(--forest); font-weight: 600;">MilaBoyd1991@gmail.com</a>
+          </p>
         </form>
 
       </div>
@@ -303,32 +333,37 @@
   </footer>
 
   <script>
-    // Static site so the form opens the user's email client pre filled with all the data.
-    // No backend needed. Reliable across browsers and respects user privacy.
-    document.getElementById('inquiryForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      const get = id => document.getElementById(id).value.trim();
-      const name = get('name');
-      const email = get('email');
-      const company = get('company');
-      const type = get('type');
-      const budget = get('budget');
-      const timeline = get('timeline');
-      const brief = get('brief');
+    // Formspree handles the POST and the email delivery. After a successful
+    // submission Formspree redirects back to ?sent=ok which triggers the
+    // confirmation panel below. The form's action attribute holds the endpoint.
+    (function(){
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('sent') === 'ok'){
+        document.getElementById('successPanel').style.display = 'block';
+        document.getElementById('inquiryForm').style.display = 'none';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
 
-      const subject = encodeURIComponent('New inquiry from ' + (name || 'the website'));
-      const body = encodeURIComponent(
-        'Hi Mila,\n\n' +
-        'Name: ' + name + '\n' +
-        'Email: ' + email + '\n' +
-        'Company or project: ' + company + '\n' +
-        'Project type: ' + type + '\n' +
-        'Budget range: ' + budget + '\n' +
-        'Timeline: ' + timeline + '\n\n' +
-        'Brief:\n' + brief + '\n'
-      );
-      window.location.href = 'mailto:MilaBoyd1991@gmail.com?subject=' + subject + '&body=' + body;
-    });
+      // If the Formspree endpoint has not been activated yet, fall back to a
+      // mailto inquiry so the form still works during setup.
+      const form = document.getElementById('inquiryForm');
+      if (form && form.action.indexOf('YOUR_FORMSPREE_ID') !== -1){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          const data = new FormData(form);
+          const lines = [];
+          lines.push('Hi Mila,');
+          lines.push('');
+          ['name','email','company','project_type','budget','timeline','brief'].forEach(function(k){
+            const v = data.get(k);
+            if (v) lines.push(k.replace('_',' ') + ': ' + v);
+          });
+          const subject = encodeURIComponent('New inquiry from ' + (data.get('name') || 'the website'));
+          const body = encodeURIComponent(lines.join('\n'));
+          window.location.href = 'mailto:MilaBoyd1991@gmail.com?subject=' + subject + '&body=' + body;
+        });
+      }
+    })();
   </script>
 
   <script src="js/nav.js" defer></script>

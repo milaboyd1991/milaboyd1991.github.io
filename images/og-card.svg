@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <style>
+      .bg { fill: #F3EBDD; }
+      .ink { fill: #1F1A14; }
+      .forest { fill: #2D3F2C; }
+      .gold { fill: #B89263; }
+      .display { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-weight: 400; }
+      .ui { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="630"/>
+  <rect class="gold" x="100" y="0" width="2" height="100"/>
+  <text class="ui gold" x="120" y="55" font-size="20">Mila Boyd · Studio</text>
+  <text class="display ink" x="100" y="280" font-size="120">Rooted design.</text>
+  <text class="display forest" x="100" y="410" font-size="120" font-style="italic">Considered systems.</text>
+  <rect class="gold" x="100" y="490" width="80" height="2"/>
+  <text class="ui ink" x="100" y="540" font-size="18">Designer · Strategist · Creative Consultant</text>
+  <text class="ui ink" x="100" y="580" font-size="16" opacity="0.6">milaboyd1991.github.io · Pacific Northwest</text>
+</svg>

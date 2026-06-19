@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /hub.html
+Disallow: /experience.html
+Disallow: /logo-explorations.html
+
+Sitemap: https://milaboyd1991.github.io/sitemap.xml
