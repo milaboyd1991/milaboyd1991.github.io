@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Logo Explorations · Mila Boyd · Direction A</title>
+
+  <link href="css/bootstrap-5.3.8.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- inherits from css/portfolio.css design system -->
+</head>
+<body>
+
+  <div class="doc-header">
+    <span class="eyebrow">Direction A · Neon Gradient on Black</span>
+    <h1>Four logo directions <span class="grad-text">in your new brand</span>.</h1>
+    <p>
+      Brand reset: dark backgrounds, gradient accent (cyan → magenta → orange), modern UX-designer
+      energy. Each direction tested at three scales, hero, navbar, favicon, plus a light-mode
+      version so it survives on Pak's lighter pages if we need it.
+    </p>
+    <div class="word-triad">
+      <span>Foundation<small>grounded · solid</small></span>
+      <span>Edge<small>evolving · sharp</small></span>
+      <span>Human<small>warm · soft</small></span>
+    </div>
+  </div>
+
+  <!-- ============ DIRECTION 01, STACKED WORDMARK ============ -->
+  <div class="direction">
+    <span class="label">Direction 01</span>
+    <h2>Stacked Wordmark · Gradient Rule</h2>
+    <p class="rationale">
+      The name does all the work. "MILA" / gradient rule / "BOYD" in Lato Black. The gradient line
+      is the <strong>Edge</strong>; the heavy type is the <strong>Foundation</strong>; the open
+      counters in Lato keep it <strong>Human</strong>. Reads like a magazine masthead but with neon under the skin.
+    </p>
+    <div class="size-row">
+      <div class="size-cell"><span class="cap">Hero</span>
+        <div class="logo-wordmark">
+          <span class="name1 grad-text">MILA</span>
+          <span class="rule"></span>
+          <span class="name2 grad-text">BOYD</span>
+        </div>
+      </div>
+      <div class="size-cell small"><span class="cap">Navbar</span>
+        <div class="logo-wordmark">
+          <span class="name1 grad-text">MILA</span>
+          <span class="rule"></span>
+          <span class="name2 grad-text">BOYD</span>
+        </div>
+      </div>
+      <div class="size-cell light small"><span class="cap">Light Mode</span>
+        <div class="logo-wordmark">
+          <span class="name1">MILA</span>
+          <span class="rule"></span>
+          <span class="name2">BOYD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ DIRECTION 02, SCRIPT + SANS PAIR ============ -->
+  <div class="direction">
+    <span class="label">Direction 02</span>
+    <h2>Script Mila <span class="grad-text">+</span> Sans BOYD</h2>
+    <p class="rationale">
+      Picks up the cursive-script accents from your reference images (<em>"I design"</em>,
+      <em>"Every detail tells a story"</em>). "Mila" in flowing Dancing Script, the <strong>Human</strong>
+      handwritten warmth. "BOYD" in Lato Black caps, the <strong>Foundation</strong>. The contrast itself is the <strong>Edge</strong>.
+    </p>
+    <div class="size-row">
+      <div class="size-cell"><span class="cap">Hero</span>
+        <div class="logo-pair">
+          <span class="mila">Mila</span>
+          <span class="boyd grad-text">BOYD</span>
+        </div>
+      </div>
+      <div class="size-cell small"><span class="cap">Navbar</span>
+        <div class="logo-pair">
+          <span class="mila">Mila</span>
+          <span class="boyd grad-text">BOYD</span>
+        </div>
+      </div>
+      <div class="size-cell light small"><span class="cap">Light Mode</span>
+        <div class="logo-pair">
+          <span class="mila">Mila</span>
+          <span class="boyd grad-text">BOYD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ DIRECTION 03, MONOGRAM MB ============ -->
+  <div class="direction">
+    <span class="label">Direction 03</span>
+    <h2>Monogram · M and B with neon glow</h2>
+    <p class="rationale">
+      M built from sharp 90° lines (cyan, <strong>Foundation</strong>, the physical-design world).
+      B built from soft curves (magenta, <strong>Human</strong>, the digital screen). The whole
+      mark <em>is</em> the hybrid story in two letters. Glow effect carries the gradient brand. Survives at favicon size.
+    </p>
+    <div class="size-row">
+      <div class="size-cell"><span class="cap">Hero</span>
+        <div class="logo-mono">
+          <svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" aria-label="MB monogram">
+            <defs>
+              <filter id="glowCyan" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="3" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="glowMag" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="3" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <g fill="none" stroke="#00C2FF" stroke-width="10" stroke-linecap="square" filter="url(#glowCyan)">
+              <path d="M 22 150 L 22 30 L 60 110 L 98 30 L 98 150" />
+            </g>
+            <g fill="none" stroke="#FF3CAC" stroke-width="10" stroke-linecap="round" filter="url(#glowMag)">
+              <path d="M 110 30 L 110 150" />
+              <path d="M 110 30 Q 158 30 158 60 Q 158 88 122 90" />
+              <path d="M 110 90 Q 162 90 162 120 Q 162 150 110 150" />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="size-cell small"><span class="cap">Navbar</span>
+        <div class="logo-mono">
+          <svg width="58" height="58" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" aria-label="MB monogram small">
+            <g fill="none" stroke="#00C2FF" stroke-width="12" stroke-linecap="square">
+              <path d="M 22 150 L 22 30 L 60 110 L 98 30 L 98 150" />
+            </g>
+            <g fill="none" stroke="#FF3CAC" stroke-width="12" stroke-linecap="round">
+              <path d="M 110 30 L 110 150" />
+              <path d="M 110 30 Q 158 30 158 60 Q 158 88 122 90" />
+              <path d="M 110 90 Q 162 90 162 120 Q 162 150 110 150" />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="size-cell light small"><span class="cap">Light Mode</span>
+        <div class="logo-mono">
+          <svg width="58" height="58" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" aria-label="MB monogram light">
+            <g fill="none" stroke="#007CA8" stroke-width="12" stroke-linecap="square">
+              <path d="M 22 150 L 22 30 L 60 110 L 98 30 L 98 150" />
+            </g>
+            <g fill="none" stroke="#C72685" stroke-width="12" stroke-linecap="round">
+              <path d="M 110 30 L 110 150" />
+              <path d="M 110 30 Q 158 30 158 60 Q 158 88 122 90" />
+              <path d="M 110 90 Q 162 90 162 120 Q 162 150 110 150" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ DIRECTION 04, WORDMARK + BRIDGE MARK ============ -->
+  <div class="direction">
+    <span class="label">Direction 04</span>
+    <h2>Wordmark + Glow Bridge Mark</h2>
+    <p class="rationale">
+      Cyan square (physical, <strong>Foundation</strong>) → gradient line (the transition,
+      <strong>Edge</strong>) → magenta circle (digital, <strong>Human</strong>). Three shapes that
+      <em>are</em> your hybrid story, each carrying a neon glow. The mark stands alone as favicon when the wordmark drops off.
+    </p>
+    <div class="size-row">
+      <div class="size-cell"><span class="cap">Hero</span>
+        <div class="logo-bridge">
+          <div class="bridge-mark">
+            <span class="sq"></span>
+            <span class="arrow"></span>
+            <span class="circ"></span>
+          </div>
+          <span class="text">Mila Boyd</span>
+        </div>
+      </div>
+      <div class="size-cell small"><span class="cap">Navbar</span>
+        <div class="logo-bridge">
+          <div class="bridge-mark">
+            <span class="sq"></span>
+            <span class="arrow"></span>
+            <span class="circ"></span>
+          </div>
+          <span class="text">Mila Boyd</span>
+        </div>
+      </div>
+      <div class="size-cell light small"><span class="cap">Light Mode</span>
+        <div class="logo-bridge">
+          <div class="bridge-mark">
+            <span class="sq" style="box-shadow:none;"></span>
+            <span class="arrow"></span>
+            <span class="circ" style="box-shadow:none;"></span>
+          </div>
+          <span class="text">Mila Boyd</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pick-row">
+    <p class="script-tag">, pick your favorite ,</p>
+    <p style="margin-top: .8rem;">
+      Tell me <strong>01, 02, 03, or 04</strong>. Once you lock it, I'll rebuild the navbar +
+      add the favicon across every page, and refresh the portfolio palette to match
+      this new brand direction.
+    </p>
+  </div>
+
+  <div class="center">
+    <a class="back-link" href="index.html">← back to portfolio</a>
+  </div>
+
+</body>
+</html>

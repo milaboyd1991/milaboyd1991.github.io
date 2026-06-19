@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="keywords" content="Mila Boyd, UX UI design, product design, PNW Floor Design app, design system, manual vs AI design, hybrid design workflow, creative brief, sitemap, design thinking, Pierce College DDSGN 151 215, Min Pak">
+  <meta name="description" content="UX/UI design practice page documenting Mila Boyd's growth at Pierce College, a working framework for manual, AI-powered, and hybrid design, and the full academic case study for the PNW Floor Design mobile app following Professor Min Pak's creative brief template.">
+
+  <title>UX/UI Design Practice | Mila Boyd</title>
+
+  <link rel="canonical" href="https://milaaboyd.pierceadvancedux.com/uxui.html">
+
+  <link href="css/bootstrap-5.3.8.css" rel="stylesheet">
+  <link href="css/portfolio.css" rel="stylesheet" type="text/css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Academic case-study styles */
+    .study-table{ width: 100%; border-collapse: collapse; margin: var(--s-3) 0; }
+    .study-table th, .study-table td{
+      padding: .9rem 1.1rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(15,12,10,0.10);
+    }
+    .study-table th{
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .75rem;
+      color: var(--sepia);
+      border-bottom: 1px solid var(--sepia);
+    }
+    .section-dark .study-table th, .section-ink .study-table th{ color: var(--sepia); border-bottom-color: var(--sepia); }
+    .section-dark .study-table th, .section-dark .study-table td,
+    .section-ink .study-table th, .section-ink .study-table td{
+      border-bottom-color: var(--sepia-line);
+      color: var(--paper);
+    }
+    .study-table td strong{ color: var(--sepia); }
+    .section-dark .study-table td strong, .section-ink .study-table td strong{ color: var(--amber); }
+
+    .metric{ font-family: 'Lato', sans-serif; font-weight: 900; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1; color: var(--sepia); display: block; }
+    .section-dark .metric, .section-ink .metric{ color: var(--amber); }
+    .metric-label{ font-family: 'Lato', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .22em; font-size: .72rem; color: rgba(15,12,10,0.55); margin-top: .5rem; display: block; }
+    .section-dark .metric-label, .section-ink .metric-label{ color: var(--paper-soft); }
+
+    .study-cover{ padding: var(--s-7) var(--s-4) var(--s-6); text-align: center; }
+    .study-cover .doc-meta{ display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--s-3); max-width: 900px; margin: var(--s-5) auto 0; text-align: left; }
+    .study-cover .doc-meta dt{ font-family: 'Lato', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .22em; font-size: .7rem; color: var(--sepia); margin-bottom: .2rem; }
+    .study-cover .doc-meta dd{ font-family: 'Source Serif Pro', serif; font-size: 1rem; color: var(--ink); margin: 0 0 var(--s-2); }
+
+    .compare-col{ padding: var(--s-3); border-left: 2px solid var(--sepia); }
+    .section-dark .compare-col, .section-ink .compare-col{ border-left-color: var(--amber); }
+    .compare-col h5{ color: var(--sepia); margin-bottom: var(--s-2); }
+    .section-dark .compare-col h5, .section-ink .compare-col h5{ color: var(--amber); }
+
+    .process-row{ display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--s-2); margin: var(--s-4) 0; }
+    .process-step{ padding: var(--s-3); border: 1px solid rgba(15,12,10,0.12); border-radius: 2px; text-align: center; background: rgba(255,255,255,0.5); }
+    .section-dark .process-step, .section-ink .process-step{ background: var(--ground); border-color: var(--sepia-line); }
+    .process-step .step-num{ font-family: 'Lato', sans-serif; font-weight: 900; font-size: 1.6rem; color: var(--sepia); line-height: 1; display: block; margin-bottom: .4rem; }
+    .section-dark .process-step .step-num, .section-ink .process-step .step-num{ color: var(--amber); }
+    .process-step .step-label{ font-family: 'Lato', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; font-size: .72rem; color: var(--ink); }
+    .section-dark .process-step .step-label, .section-ink .process-step .step-label{ color: var(--paper); }
+
+    /* Persona card style */
+    .persona-card{ padding: var(--s-3); background: rgba(255,255,255,0.6); border: 1px solid rgba(15,12,10,0.10); border-radius: 2px; height: 100%; }
+    .section-dark .persona-card, .section-ink .persona-card{ background: var(--ground); border-color: var(--sepia-line); }
+    .persona-card .persona-name{ font-family: 'Lato', sans-serif; font-weight: 900; font-size: 1.25rem; text-transform: uppercase; letter-spacing: .04em; color: var(--ink); margin-bottom: .3rem; }
+    .section-dark .persona-card .persona-name, .section-ink .persona-card .persona-name{ color: var(--paper); }
+    .persona-card .persona-tag{ font-family: 'Lato', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; font-size: .7rem; color: var(--sepia); margin-bottom: var(--s-2); display: block; }
+    .section-dark .persona-card .persona-tag, .section-ink .persona-card .persona-tag{ color: var(--amber); }
+
+    /* PNW app design system color swatches */
+    .pnw-swatch{ width: 100%; height: 70px; border-radius: 2px; border: 1px solid rgba(15,12,10,0.12); margin-bottom: .4rem; }
+
+    /* Sitemap tree (text-based hierarchy) */
+    .sitemap-tree{ font-family: 'Lato', sans-serif; font-size: .95rem; line-height: 1.9; padding-left: var(--s-3); border-left: 2px solid var(--sepia); }
+    .section-dark .sitemap-tree, .section-ink .sitemap-tree{ border-left-color: var(--amber); }
+    .sitemap-tree .lvl-1{ font-weight: 900; text-transform: uppercase; letter-spacing: .04em; }
+    .sitemap-tree .lvl-2{ padding-left: var(--s-3); font-weight: 400; color: rgba(15,12,10,0.7); }
+    .section-dark .sitemap-tree .lvl-2, .section-ink .sitemap-tree .lvl-2{ color: var(--paper-soft); }
+  </style>
+</head>
+
+<body data-nav="fixed">
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Mila Boyd</a>
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        MENU
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="uxui.html">Case Studies</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ COVER (cream) ============ -->
+  <section class="section-cream">
+    <div class="study-cover">
+      <span class="eyebrow">UX/UI Design · Academic Case Study</span>
+      <h1>UX/UI Design <em>Practice.</em></h1>
+      <p class="lead" style="max-width: 760px; margin: var(--s-3) auto 0;">
+        A growth narrative, a working framework for manual, AI-powered, and hybrid design,
+        and the full academic case study for the PNW Floor Design mobile app — built to
+        Professor Pak's creative brief template.
+      </p>
+      <dl class="doc-meta">
+        <div><dt>Courses</dt><dd>DDSGN 151 Mobile UI · DDSGN 215 Advanced UX</dd></div>
+        <div><dt>Instructor</dt><dd>Professor Min Pak, M.F.A.</dd></div>
+        <div><dt>Practitioner</dt><dd>Mila Boyd · ID 201605377</dd></div>
+        <div><dt>Anchor Project</dt><dd>PNW Floor Design Mobile App</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ ABSTRACT (dark) ============ -->
+  <section class="section section-dark" data-num="00">
+    <div class="container" style="max-width: 900px;">
+      <span class="eyebrow">Abstract</span>
+      <h2>What this case study <em>is for.</em></h2>
+      <p class="lead">
+        This is not a gallery of screens. It is a working academic document built to Professor
+        Pak's creative brief template, expanded with two meta layers a final-year student should
+        own: a growth narrative comparing who I was in 2022 to who I am now, and a working
+        framework for choosing between manual, AI-powered, and hybrid design workflows. The
+        anchor artifact is the PNW Floor Design mobile app — a real product for my real flooring
+        company in Washington, designed using the design thinking process and the Bootstrap
+        component skills from Advanced UX.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 001 — GROWTH NARRATIVE (cream) ============ -->
+  <section class="section section-cream" data-num="01">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">Growth Narrative</span>
+      <h2>Who I was, <em>who I am now.</em></h2>
+
+      <p class="lead">
+        In January 2022 Professor Pak wrote a letter of recommendation describing me as
+        "naturally talented and hardworking," with "an incredibly astute attention to detail"
+        and a "methodical creative process." That was the student version of me: careful,
+        observant, willing to refine a single composition until it locked.
+      </p>
+      <p class="lead">
+        Four years and a return to school later, the careful attention is still there. What is
+        new is the system thinking. I no longer try to make one beautiful artifact at a time. I
+        build the rules the artifacts come from.
+      </p>
+
+      <div class="row g-4" style="margin-top: var(--s-4);">
+        <div class="col-md-6">
+          <div class="compare-col">
+            <h5>Then · 2022</h5>
+            <ul>
+              <li>One artifact at a time. Polish, refine, ship.</li>
+              <li>Composition-first. The page is the unit of work.</li>
+              <li>Colors and type chosen project by project.</li>
+              <li>"Does this poster look good?"</li>
+              <li>Tools as means to an end.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="compare-col">
+            <h5>Now · 2026</h5>
+            <ul>
+              <li>System-first. Rules generate the artifacts.</li>
+              <li>The token (color, spacing, weight) is the unit of work.</li>
+              <li>One design system inherited across every page.</li>
+              <li>"Does this decision compound across the product?"</li>
+              <li>Tools as collaborators, weighed against the task.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <blockquote style="margin-top: var(--s-5);">
+        "Critical thinking is your strongest skill. Build custom design systems to stand out from
+        generic UI components. Strong case studies are the most important strategy."
+      </blockquote>
+      <p style="margin-top: var(--s-2);"><strong>Min Pak, M.F.A.</strong> · Chair of New Media &amp; Digital Design, Pierce College</p>
+    </div>
+  </section>
+
+  <!-- ============ 002 — MANUAL vs AI vs HYBRID (dark) ============ -->
+  <section class="section section-dark" data-num="02">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">Working Framework</span>
+      <h2>Manual, AI-powered, <em>or hybrid?</em></h2>
+      <p class="lead">
+        The honest question every working designer faces in 2026 is no longer whether to use AI.
+        It is when. The framework I work from is simple: do not let AI make a decision that
+        defines the brand or the user. Let AI carry the volume so the designer can hold the
+        judgment.
+      </p>
+
+      <div class="row g-4" style="margin-top: var(--s-4);">
+
+        <div class="col-md-4">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">Manual</h4>
+            <p><strong>When the human owns it.</strong></p>
+            <ul>
+              <li>Design system tokens (color, type, spacing)</li>
+              <li>Information architecture and user flow</li>
+              <li>Brand voice and tone of every page</li>
+              <li>Critical UX decisions (privacy, accessibility, hierarchy)</li>
+              <li>Final visual refinement</li>
+            </ul>
+            <p class="card-text" style="margin-top: var(--s-2);"><em>Why manual:</em> these are the choices that compound across every screen. A bad token poisons the whole product.</p>
+          </div></div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">AI-Powered</h4>
+            <p><strong>When volume is the bottleneck.</strong></p>
+            <ul>
+              <li>Hero image exploration and moodboards</li>
+              <li>First-draft copy, then humanized</li>
+              <li>Boilerplate HTML and repetitive markup</li>
+              <li>Pattern checks (accessibility, readability)</li>
+              <li>Batch file operations and compression</li>
+            </ul>
+            <p class="card-text" style="margin-top: var(--s-2);"><em>Why AI:</em> tasks where doing it by hand costs more attention than the work is worth. AI does the boring so the human can do the brave.</p>
+          </div></div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">Hybrid · the strongest mode</h4>
+            <p><strong>When AI proposes, the designer judges.</strong></p>
+            <ul>
+              <li>AI generates five options, designer picks one and refines</li>
+              <li>AI drafts the code, designer corrects to the system</li>
+              <li>AI catches vibe-coded tells, designer rewrites in voice</li>
+              <li>AI handles file plumbing, designer protects the asset library</li>
+              <li>Always: the designer holds the brand and the system</li>
+            </ul>
+            <p class="card-text" style="margin-top: var(--s-2);"><em>Why hybrid:</em> a designer with a clear system can use AI without losing themselves in it. A designer without a system gets eaten by it.</p>
+          </div></div>
+        </div>
+
+      </div>
+
+      <p style="margin-top: var(--s-5);">
+        <strong>The rule I keep:</strong> if a decision can be reversed cheaply, AI can take the
+        first pass. If a decision shapes everything downstream, the human takes the first pass.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 003 — TOOL TABLE (cream) ============ -->
+  <section class="section section-cream" data-num="03">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">Tools In Practice</span>
+      <h2>The tool, <em>for the task.</em></h2>
+      <p class="lead">
+        Every tool in my workflow earns its place by what kind of decision it serves.
+      </p>
+
+      <table class="study-table">
+        <thead><tr><th>Task</th><th>Tool</th><th>Mode</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Design system authoring</td><td><strong>Adobe Dreamweaver · VS Code · CSS variables</strong></td><td>Manual</td><td>Tokens define every downstream decision. I write them by hand so I know exactly what each one does.</td></tr>
+          <tr><td>Wireframes &amp; screen flow</td><td><strong>Figma</strong></td><td>Manual</td><td>Logic and information architecture are mine. Figma is the canvas.</td></tr>
+          <tr><td>Brand identity, color, type pairing</td><td><strong>Figma · Adobe Illustrator</strong></td><td>Manual</td><td>If the brand is borrowed, the trust is borrowed. I design my own marks.</td></tr>
+          <tr><td>Hero image exploration</td><td><strong>ChatGPT image gen · Adobe Firefly</strong></td><td>AI-Powered</td><td>Eight directions in an hour is impossible by hand. I pick one and refine.</td></tr>
+          <tr><td>First-draft copy</td><td><strong>Claude AI</strong></td><td>Hybrid</td><td>I outline. Claude drafts. I rewrite in my voice. Voice is mine, volume is shared.</td></tr>
+          <tr><td>Production HTML &amp; CSS</td><td><strong>Adobe Dreamweaver · Claude AI · Bootstrap 5</strong></td><td>Hybrid</td><td>Dreamweaver gives the editor and SFTP. Claude helps with patterns. The architecture decisions are mine.</td></tr>
+          <tr><td>Asset management, batch operations, compression</td><td><strong>Python scripts · Adobe Acrobat</strong></td><td>AI-Powered</td><td>Renaming 29 files, compressing 153MB PDF to 14MB, recursive uploads. Volume tasks.</td></tr>
+          <tr><td>Photo editing, background removal</td><td><strong>Adobe Photoshop · remove.bg</strong></td><td>Hybrid</td><td>AI does the rough cut. I do the cleanup the AI cannot see.</td></tr>
+          <tr><td>Accessibility &amp; readability checks</td><td><strong>Claude AI · browser DevTools</strong></td><td>AI-Powered</td><td>AI catches invisible text, poor contrast, missing alt attributes. I act on what it finds.</td></tr>
+          <tr><td>Final visual judgment</td><td><strong>My eye</strong></td><td>Manual</td><td>Always. The buck stops with the designer. No tool replaces taste.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ 004 — PNW CREATIVE BRIEF — PAK'S TEMPLATE (dark) ============ -->
+  <section class="section section-dark" data-num="04">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">Creative Brief · Pak's Template</span>
+      <h2>PNW Floor Design app, <em>the full brief.</em></h2>
+      <p class="lead">
+        Following Professor Pak's eight-section creative brief template, exactly as taught in
+        DDSGN 151. The PNW Floor Design app is the synthesis of ten years inside the flooring
+        industry and four years studying UX/UI.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 04.1 — BACKGROUND (cream) ============ -->
+  <section class="section-tight section-cream">
+    <div class="container" style="max-width: 900px;">
+      <span class="eyebrow">4.1 · Background</span>
+      <h3>Where this <em>came from.</em></h3>
+      <p>
+        PNW Floor Design LLC was created from resilience, creativity, business strategy, and a
+        vision to modernize how flooring companies connect with people. I worked directly with
+        customers inside the flooring industry for over ten years — helping homeowners select
+        materials, solve layout problems, understand product performance, and create spaces that
+        feel aligned with their lifestyle.
+      </p>
+      <p>
+        Over time, I noticed the same gap on every consultation. Most companies focus only on
+        selling product. Very few design for customer experience, digital systems, visual
+        organization, or project transparency. I saw confusion. I saw homeowners overwhelmed. I
+        saw businesses struggling with their own workflows. I realized I could help bridge that
+        gap, but to do it well I needed UX/UI training. That decision is what brought me back to
+        Pierce College in August 2024.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 04.2 — PROJECT OBJECTIVES (dark) ============ -->
+  <section class="section-tight section-dark">
+    <div class="container" style="max-width: 900px;">
+      <span class="eyebrow">4.2 · Project Objectives</span>
+      <h3>Problems and <em>goals.</em></h3>
+      <p><strong>Problem statement.</strong> Homeowners struggle to plan renovation projects because they cannot visualize materials, understand the steps, or manage communication with their flooring vendor.</p>
+      <p><strong>Goals.</strong></p>
+      <ul style="font-size: 1.05rem; line-height: 1.8;">
+        <li>Give homeowners a way to preview materials in their own space before they commit money.</li>
+        <li>Make booking a consultation a one-tap action, not a phone call.</li>
+        <li>Show every project phase in a single live timeline so customers know what is next.</li>
+        <li>Keep chat with the designer inside the app so messages do not get lost across email and text.</li>
+        <li>Integrate heated-floor smart control so the product extends past install day.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 04.3 — KEY MESSAGE (cream) ============ -->
+  <section class="section-tight section-cream">
+    <div class="container" style="max-width: 900px;">
+      <span class="eyebrow">4.3 · Key Message</span>
+      <h3>What the brand <em>says.</em></h3>
+      <blockquote>
+        Beauty. Quality. Lasting impressions. Flooring that transforms every step.
+      </blockquote>
+      <p>
+        Most flooring companies sell product. PNW Floor Design sells the experience around it.
+        The app turns a high-anxiety purchase into a guided, transparent process where the
+        homeowner stays in control from material selection through final install.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 04.4 — TARGET AUDIENCE / PERSONAS (dark) ============ -->
+  <section class="section-tight section-dark">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">4.4 · Target Audience</span>
+      <h3>Who this <em>is for.</em></h3>
+      <p class="lead">
+        Two real personas synthesized from ten years of showroom conversations.
+      </p>
+
+      <div class="row g-4" style="margin-top: var(--s-4);">
+        <div class="col-md-6">
+          <div class="persona-card">
+            <span class="persona-tag">Persona 01</span>
+            <div class="persona-name">The Working Parent</div>
+            <p><strong>Age:</strong> 42 · <strong>Location:</strong> Tacoma, WA</p>
+            <p><strong>Role:</strong> Working parent, second home renovation</p>
+            <p><strong>Goal:</strong> A flooring contractor who keeps her informed without phone calls. No time for showroom visits between work and pickup.</p>
+            <p><strong>Frustration:</strong> The last contractor disappeared after the contract signed. She had to chase status updates.</p>
+            <p><strong>Needs from PNW app:</strong> Project timeline, in-app chat, push notifications for delivery and install dates.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="persona-card">
+            <span class="persona-tag">Persona 02</span>
+            <div class="persona-name">The First-Time Homeowner</div>
+            <p><strong>Age:</strong> 31 · <strong>Location:</strong> Seattle, WA</p>
+            <p><strong>Role:</strong> First-time homeowner, never picked flooring before</p>
+            <p><strong>Goal:</strong> Understand what the categories mean (LVP vs. engineered hardwood vs. tile) without sounding ignorant to the designer.</p>
+            <p><strong>Frustration:</strong> Houzz is inspiring but overwhelming. Floor &amp; Decor's site does not explain enough. Home Depot is product-first, not design-first.</p>
+            <p><strong>Needs from PNW app:</strong> Material Library with plain-language descriptions, filters by use-case (bathroom, kitchen, basement), saved favorites.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04.5 — COMPETITORS (cream) ============ -->
+  <section class="section-tight section-cream">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">4.5 · Competitors</span>
+      <h3>Where the <em>gap is.</em></h3>
+
+      <table class="study-table">
+        <thead><tr><th>Competitor</th><th>Strength</th><th>Weakness</th><th>What PNW does instead</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Houzz</strong></td><td>Strong inspiration library, large content catalog</td><td>Overwhelming. No project tracking. Generic content, not tailored to the homeowner's actual project.</td><td>Curated Material Library tied to the homeowner's specific project. Filters by use-case, not by style alone.</td></tr>
+          <tr><td><strong>Floor &amp; Decor</strong></td><td>Wide product range, in-store sampling</td><td>No AR visualization. No way to preview a sample in your actual room before buying.</td><td>Future AR visualization layer. Saved material metadata that survives the showroom visit.</td></tr>
+          <tr><td><strong>Home Depot</strong></td><td>Convenience, scale, financing</td><td>Product-first, not design-first. No designer relationship after purchase.</td><td>In-app chat with the assigned designer. Project visibility from quote through final install.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ 04.6 — SOLUTIONS / REQUIREMENTS (dark) ============ -->
+  <section class="section-tight section-dark">
+    <div class="container" style="max-width: 900px;">
+      <span class="eyebrow">4.6 · Solutions &amp; Requirements</span>
+      <h3>What the app <em>must do.</em></h3>
+      <ul style="font-size: 1.05rem; line-height: 1.8;">
+        <li><strong>Empathy-driven research first.</strong> The app starts from real customer pain, not a feature list.</li>
+        <li><strong>Task-based interface.</strong> Sections are organized by what a homeowner is trying to do (browse materials, book a call, track a project) — not by what a flooring company sells.</li>
+        <li><strong>Plain language.</strong> Product copy is written for a first-time homeowner. No jargon that requires a footnote.</li>
+        <li><strong>Project transparency by default.</strong> Every project phase visible by default. The homeowner does not have to ask.</li>
+        <li><strong>Trend-aware.</strong> AR visualization, AI material recommendations, smart-home integration, self-service tools — designed in from the start, not bolted on later.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 04.7 — MESSAGING & DELIVERABLES (cream) ============ -->
+  <section class="section-tight section-cream">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">4.7 · Messaging &amp; Deliverables</span>
+      <h3>The design thinking <em>process I followed.</em></h3>
+
+      <div class="process-row">
+        <div class="process-step"><span class="step-num">01</span><span class="step-label">Research</span></div>
+        <div class="process-step"><span class="step-num">02</span><span class="step-label">Ideation</span></div>
+        <div class="process-step"><span class="step-num">03</span><span class="step-label">Low Fi</span></div>
+        <div class="process-step"><span class="step-num">04</span><span class="step-label">High Fi</span></div>
+        <div class="process-step"><span class="step-num">05</span><span class="step-label">Case Study</span></div>
+        <div class="process-step"><span class="step-num">06</span><span class="step-label">Final Visual</span></div>
+      </div>
+
+      <div class="row g-4" style="margin-top: var(--s-4);">
+        <div class="col-md-6"><div class="card h-100"><div class="card-body">
+          <h4 class="card-title">01 · Research</h4>
+          <p>Ten years of real showroom conversations turned into a research foundation. Documented the most common homeowner pain points: not remembering samples, losing communication after contract signed, confusion about material categories.</p>
+          <p><strong>Mode:</strong> Manual. Real notes, real customers.</p>
+        </div></div></div>
+
+        <div class="col-md-6"><div class="card h-100"><div class="card-body">
+          <h4 class="card-title">02 · Ideation · Empathy Map + Journey Map</h4>
+          <p>Synthesized findings into two anonymous personas (The Working Parent, The First-Time Homeowner) and a customer journey: discover → consult → select → quote → install → live with. Identified post-contract communication as the steepest emotional drop.</p>
+          <p><strong>Mode:</strong> Hybrid. AI helped cluster interview themes. Persona writing was mine.</p>
+        </div></div></div>
+
+        <div class="col-md-6"><div class="card h-100"><div class="card-body">
+          <h4 class="card-title">03 · Low Fidelity · Sketches</h4>
+          <p>Hand sketches and Figma low-fi wireframes for the ten core screens. Focus on flow, not pixels. Confirmed the navigation pattern (bottom-tab) and the priority of Material Library, Project Timeline, Chat.</p>
+          <p><strong>Mode:</strong> Manual. The structure had to be mine.</p>
+        </div></div></div>
+
+        <div class="col-md-6"><div class="card h-100"><div class="card-body">
+          <h4 class="card-title">04 · High Fidelity · Figma</h4>
+          <p>Locked the visual design system (lavender, paper, dark-green primary, soft pink secondary, SF Pro + Source Serif Pro). Built component library first. Screens compounded instead of fighting each other.</p>
+          <p><strong>Mode:</strong> Hybrid. AI helped with first-pass component variants. I refined every screen.</p>
+        </div></div></div>
+
+        <div class="col-md-6"><div class="card h-100"><div class="card-body">
+          <h4 class="card-title">05 · Case Study Document</h4>
+          <p>A 60-page case study PDF documenting every screen, every flow, the persona reasoning, and the visual system. Originally 153 MB. Recompressed to 14 MB without losing readability.</p>
+          <p><strong>Mode:</strong> Hybrid. Manual writing, AI-powered compression.</p>
+        </div></div></div>
+
+        <div class="col-md-6"><div class="card h-100"><div class="card-body">
+          <h4 class="card-title">06 · Final Visual Design</h4>
+          <p>Final pass on every screen against the design system rules: limited palette, two-font pairing, single type scale, two radius values, subtle hover only. Stripped anything that drifted.</p>
+          <p><strong>Mode:</strong> Manual. The system is the editor. I am the system.</p>
+        </div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04.8 — VISUAL DESIGN SYSTEM / MOODBOARD (dark) ============ -->
+  <section class="section section-dark" data-num="04.8">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">4.8 · Visual Design System</span>
+      <h2>The PNW app's <em>mood and rules.</em></h2>
+      <p class="lead">
+        The visual design system for the PNW Floor Design app uses a different palette than this
+        portfolio site (a brand should not borrow from another brand). The app's brand is
+        lavender luxury — soft, premium, calm. Below are the locked tokens.
+      </p>
+
+      <h4 style="margin-top: var(--s-4);">Theory</h4>
+      <p>Soft luxury. Minimal, clean layouts. Human-centered digital experiences. The visual language signals "premium service" without being cold or corporate.</p>
+
+      <h4 style="margin-top: var(--s-4);">Color Tokens</h4>
+      <div class="row g-3" style="margin-top: var(--s-2);">
+        <div class="col-6 col-md-3">
+          <div class="pnw-swatch" style="background:#0F5A45;"></div>
+          <small style="display:block;color:var(--paper-soft);letter-spacing:.14em;text-transform:uppercase;font-size:.7rem;">Primary · Deep Green · #0F5A45</small>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="pnw-swatch" style="background:#F4C4B8;"></div>
+          <small style="display:block;color:var(--paper-soft);letter-spacing:.14em;text-transform:uppercase;font-size:.7rem;">Secondary · Soft Pink · #F4C4B8</small>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="pnw-swatch" style="background:#A7AAE1;"></div>
+          <small style="display:block;color:var(--paper-soft);letter-spacing:.14em;text-transform:uppercase;font-size:.7rem;">Accent · Lavender · #A7AAE1</small>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="pnw-swatch" style="background:#1F2937;"></div>
+          <small style="display:block;color:var(--paper-soft);letter-spacing:.14em;text-transform:uppercase;font-size:.7rem;">Text · Dark Ink · #1F2937</small>
+        </div>
+      </div>
+
+      <h4 style="margin-top: var(--s-5);">Typography</h4>
+      <table class="study-table">
+        <thead><tr><th>Token</th><th>Family</th><th>Size</th><th>Use</th></tr></thead>
+        <tbody>
+          <tr><td>H1</td><td>SF Pro</td><td>36px</td><td>Screen titles</td></tr>
+          <tr><td>H2</td><td>SF Pro</td><td>24px</td><td>Section headers</td></tr>
+          <tr><td>H3</td><td>SF Pro</td><td>20px</td><td>Subsections, card titles</td></tr>
+          <tr><td>H4</td><td>SF Pro</td><td>18px</td><td>Tertiary labels</td></tr>
+          <tr><td>H5</td><td>SF Pro</td><td>16px</td><td>UI labels</td></tr>
+          <tr><td>H6</td><td>SF Pro</td><td>14px</td><td>Tags, eyebrows</td></tr>
+          <tr><td>Body</td><td>Source Serif Pro</td><td>12px</td><td>All long-form copy</td></tr>
+        </tbody>
+      </table>
+
+      <h4 style="margin-top: var(--s-4);">Voice</h4>
+      <p>Warm. Plain language. Confident without bragging. A friend who happens to know flooring. Never sales-y, never cold.</p>
+
+      <h4 style="margin-top: var(--s-4);">Logo &amp; Iconography</h4>
+      <p>Custom PNW house mark in deep green. Custom iconography for the three anchor features (tile sample, wood plank stack, heated-floor element). Icons hand-drawn in Inkscape, exported as SVG for crisp rendering at every screen density.</p>
+    </div>
+  </section>
+
+  <!-- ============ 005 — SITEMAP (cream) ============ -->
+  <section class="section section-cream" data-num="05">
+    <div class="container" style="max-width: 900px;">
+      <span class="eyebrow">Sitemap</span>
+      <h2>Ten screens, <em>one product.</em></h2>
+      <p class="lead">
+        The full information architecture for the PNW Floor Design app. Every screen earns its
+        place by serving a real homeowner task.
+      </p>
+
+      <div class="sitemap-tree" style="margin-top: var(--s-4);">
+        <div class="lvl-1">01 · Onboarding / Login</div>
+        <div class="lvl-2">Email, password, create account, social sign-in</div>
+
+        <div class="lvl-1">02 · Home Dashboard</div>
+        <div class="lvl-2">Active projects summary, saved materials, upcoming consultations, next action</div>
+
+        <div class="lvl-1">03 · Material Library</div>
+        <div class="lvl-2">— Tile (porcelain, ceramic, natural stone)</div>
+        <div class="lvl-2">— Wood (engineered, solid, LVP)</div>
+        <div class="lvl-2">— Carpet (residential, commercial, area rugs)</div>
+
+        <div class="lvl-1">04 · AR Visualization Tool</div>
+        <div class="lvl-2">Camera overlay to preview material in user's room before purchase</div>
+
+        <div class="lvl-1">05 · Book Consultation</div>
+        <div class="lvl-2">Choose designer, pick time, in-home or virtual, pre-call questionnaire</div>
+
+        <div class="lvl-1">06 · Project Timeline Tracking</div>
+        <div class="lvl-2">Quote → Approval → Materials Ordered → Materials Arrived → Install Scheduled → Installed → Paid</div>
+
+        <div class="lvl-1">07 · Chat with Designer</div>
+        <div class="lvl-2">In-app messaging, photo sharing, designer availability indicator</div>
+
+        <div class="lvl-1">08 · Invoices &amp; Payments</div>
+        <div class="lvl-2">Invoice history, secure payment, financing options, receipts</div>
+
+        <div class="lvl-1">09 · Heated Floor Control</div>
+        <div class="lvl-2">IoT integration, zone-by-zone scheduling, occupancy-pattern learning</div>
+
+        <div class="lvl-1">10 · Profile &amp; Settings</div>
+        <div class="lvl-2">Account, notification preferences, saved addresses, designer relationship, sign-out</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 006 — FEATURES DEEP DIVE (dark) ============ -->
+  <section class="section section-dark" data-num="06">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">Anchor Features · Deep Dive</span>
+      <h2>What the app <em>actually does.</em></h2>
+
+      <div class="row g-4" style="margin-top: var(--s-4);">
+        <div class="col-md-4"><div class="card h-100"><div class="card-body">
+          <h4 class="card-title">Material Library</h4>
+          <p><strong>Problem.</strong> Homeowners cannot remember which sample they liked. Photos in a phone gallery do not preserve product code, square footage, or installation type.</p>
+          <p><strong>Feature.</strong> Saved materials with full metadata. Filter by room type, water resistance, foot traffic, budget.</p>
+          <p><strong>Why it matters.</strong> Removes the "I think it was the gray one" conversation. The sample stays with the customer.</p>
+        </div></div></div>
+
+        <div class="col-md-4"><div class="card h-100"><div class="card-body">
+          <h4 class="card-title">Project Timeline</h4>
+          <p><strong>Problem.</strong> After the contract signs, communication drops off. Homeowners do not know when materials arrive, when install starts, or what is next.</p>
+          <p><strong>Feature.</strong> Live timeline of every project phase. Push notifications on phase transitions.</p>
+          <p><strong>Why it matters.</strong> Project visibility is trust. Trust is repeat business.</p>
+        </div></div></div>
+
+        <div class="col-md-4"><div class="card h-100"><div class="card-body">
+          <h4 class="card-title">Heated Floor Control</h4>
+          <p><strong>Problem.</strong> Smart-home control of radiant heat is fragmented across vendor apps. No one app knows the room layout the floor was installed under.</p>
+          <p><strong>Feature.</strong> IoT integration mapped to the original install plan. Schedule by zone, by day, by occupancy.</p>
+          <p><strong>Why it matters.</strong> The flooring product becomes the platform, not just the floor.</p>
+        </div></div></div>
+      </div>
+
+      <p style="margin-top: var(--s-5);">
+        <a href="https://www.figma.com/design/cdilwQKBZkUUlG6CCGJKCq/milaboydpnw_MVP-design" target="_blank" rel="noopener" class="btn btn-primary btn-lg me-2">View Live Figma Prototype &rarr;</a>
+        <a href="images/app.pdf" target="_blank" class="btn btn-outline-primary btn-lg me-2">Open Case Study PDF</a>
+        <a href="images/app.pdf" download class="btn btn-outline-primary btn-lg">Download PDF</a>
+      </p>
+      <p style="margin-top: var(--s-3); font-size: .85rem; color: var(--paper-soft);">
+        <em>Live Figma file (view-only). Last updated as part of DDSGN 215 Project 2 submission.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 007 — DESIGN SYSTEM CONNECTION (cream) ============ -->
+  <section class="section section-cream" data-num="07">
+    <div class="container" style="max-width: 900px;">
+      <span class="eyebrow">Design System Connection</span>
+      <h2>The portfolio site <em>holds the same rules.</em></h2>
+      <p class="lead">
+        The PNW Floor Design app uses lavender luxury tokens. This portfolio site uses warm sepia
+        tokens. Different brands, same discipline. The five constraints below apply to every
+        project I touch.
+      </p>
+
+      <div class="row g-3 text-center" style="margin: var(--s-4) 0;">
+        <div class="col-6 col-md"><span class="metric">5</span><span class="metric-label">colors max</span></div>
+        <div class="col-6 col-md"><span class="metric">2</span><span class="metric-label">fonts max</span></div>
+        <div class="col-6 col-md"><span class="metric">3</span><span class="metric-label">type sizes</span></div>
+        <div class="col-6 col-md"><span class="metric">2</span><span class="metric-label">radius values</span></div>
+        <div class="col-6 col-md"><span class="metric">3px</span><span class="metric-label">max hover lift</span></div>
+      </div>
+
+      <p>
+        Five colors means I cannot hide behind variety. Two fonts means the type pairing carries
+        the emotion, not a third font. Three sizes means the hierarchy is decided once. Two
+        radius values means every corner agrees. A 3-pixel maximum hover lift means the
+        interaction is felt, not announced. Restraint is the proof that the designer made a
+        choice.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 008 — DISCOVERIES (dark) ============ -->
+  <section class="section section-dark" data-num="08">
+    <div class="container" style="max-width: 900px;">
+      <span class="eyebrow">Discoveries</span>
+      <h2>What four years <em>actually taught me.</em></h2>
+
+      <h4 style="margin-top: var(--s-4);">A design system makes me smarter than I am alone.</h4>
+      <p>When I have a system, I can think about the user instead of the pixels. The system holds the pixels for me. When I do not have a system, every decision exhausts a budget I cannot afford to spend.</p>
+
+      <h4>AI is a microphone, not a voice.</h4>
+      <p>AI can make my voice louder, faster, and reach further. It cannot replace the voice. The moment I let AI hold the brand voice, the brand stops being mine. The discipline is to ask AI for the volume work and never the identity work.</p>
+
+      <h4>Restraint reads as class.</h4>
+      <p>The 500-site audit on vibe-coded portfolios named the same patterns I had been making: purple gradients, em-dashes, glowing hovers, fake testimonials, placeholder names. None of those patterns are bad in isolation. All of them together signal a missing system. I removed every one of them from this site on purpose.</p>
+
+      <h4>The flooring industry taught me product design before I had the word for it.</h4>
+      <p>Ten years of helping homeowners pick tile, calm their anxiety, manage delivery problems, and protect their budget was a product design education in disguise. UX/UI school gave me the vocabulary. The job gave me the empathy. The combination is the work.</p>
+    </div>
+  </section>
+
+  <!-- ============ 009 — WHAT'S NEXT (cream) ============ -->
+  <section class="section section-cream" data-num="09">
+    <div class="container" style="max-width: 900px;">
+      <span class="eyebrow">What's Next</span>
+      <h2>The next case studies, <em>already started.</em></h2>
+      <ul style="font-size: 1.1rem; line-height: 1.8;">
+        <li>A second product case study: a remodel project tracker designed for contractors (not homeowners).</li>
+        <li>An accessibility audit of the PNW app's anchor flows tested on a real device with a real user.</li>
+        <li>A photography case study showing how I shoot materials for the showroom (light, texture, scale).</li>
+        <li>An AR visualization prototype for the Material Library, building on the visualization step in the brief.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING JUMBOTRON ============ -->
+  <div class="container-fluid px-0">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container" style="max-width: 900px;">
+        <span class="eyebrow">Conclusion</span>
+        <h1 style="font-size: var(--t-mid); margin-bottom: var(--s-3);">
+          The growth is real, <em>the system is the proof.</em>
+        </h1>
+        <p class="lead">
+          A different student than the one Pak met in 2022 is writing this. Same attention to
+          detail. Same methodical process. Now built on top of a design system that survives my
+          own mistakes, an academic creative-brief discipline, and a tool framework that uses AI
+          without losing the voice.
+        </p>
+        <div style="margin-top: var(--s-4);">
+          <a href="build-case-study.html" class="btn btn-primary btn-lg me-2">Read the Build Case Study</a>
+          <a href="contact.html" class="btn btn-outline-primary btn-lg">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    &copy; Mila Boyd 2026 &middot; Designer Portfolio &middot; Pierce College DDSGN 215
+  </footer>
+
+  <script src="js/popper-2.11.8.min.js"></script>
+  <script src="js/bootstrap-5.3.8.js"></script>
+  <script src="js/translate.js" defer></script>
+</body>
+</html>

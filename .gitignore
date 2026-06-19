@@ -1,0 +1,55 @@
+# ============================================
+# Mila Boyd Portfolio · .gitignore
+# Keep the public repo to PORTFOLIO files only.
+# ============================================
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Claude Code session state (private)
+.claude/
+
+# Internal working directories (not portfolio output)
+_archive/
+_excluded_from_upload/
+_notes/
+images-backup-before-batch-1/
+design-authority-by-mila/
+PNW-Portfolio-Kit/
+
+# Bridge5 business strategy (separate private project)
+bridge5.html
+Bridge5_*.html
+bridge5-*.html
+14_Bridge5_*
+15_Bridge5_*
+16_Bridge5_*
+17_*
+18_Bridge5_*
+
+# PNW business working files (separate future project, not portfolio)
+pnw-quote-form.html
+pnw-website-build.html
+
+# Internal command-center / working dashboards
+05_Website_Command_Center.html
+ecosystem-dashboard.html
+discovery-journal.html
+
+# Working docs (research notes, not portfolio artifacts)
+*.doc
+*.docx
+*.csv
+*.xlsx
+*.zip
+
+# Duplicate / old portfolio versions
+Mila Boyd_Final Portfolio.html

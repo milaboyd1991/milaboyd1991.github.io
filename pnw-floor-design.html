@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="keywords" content="PNW Floor Design, Mila Boyd, UX/UI case study, mobile app design, flooring app, Pacific Northwest, Figma, Pierce College DDSGN 215, Min Pak creative brief">
+  <meta name="description" content="DDSGN 215 case study of PNW Floor Design LLC by Mila Boyd. Pak's 8-section creative brief applied to a 60-screen mobile app and full website design system.">
+
+  <title>PNW Floor Design · Case Study | Mila Boyd</title>
+
+  <link rel="canonical" href="https://milaaboyd.pierceadvancedux.com/pnw-floor-design.html">
+
+  <link href="css/bootstrap-5.3.8.css" rel="stylesheet">
+  <link href="css/portfolio.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-nav="fixed">
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Mila Boyd</a>
+      <button class="navbar-toggler custom-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        MENU
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">RESUME</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PORTFOLIO</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="design.html">Graphic Design</a>
+              <a class="dropdown-item" href="photography.html">Photography</a>
+              <a class="dropdown-item" href="uxui.html">UX/UI Design</a>
+              <a class="dropdown-item active" href="pnw-floor-design.html">PNW Floor Design</a>
+              <a class="dropdown-item" href="bridge5.html">Bridge 5 &middot; Bilingual Engine</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="build-case-study.html">Build Case Study</a>
+              <a class="dropdown-item" href="discovery-journal.html">Discovery Journal</a>
+              <a class="dropdown-item" href="growth-case-study.html">Growth Case Study</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ BRAND IDENTITY SYSTEM (cream) ============ -->
+  <section class="section section-cream" data-num="01">
+    <div class="container" style="max-width:1200px;">
+      <div class="text-center" style="margin-bottom: var(--s-4);">
+        <span class="eyebrow">Brand Identity System</span>
+        <h2>The system that <em>everything inherits from.</em></h2>
+        <p class="lead" style="max-width: 720px; margin: var(--s-3) auto 0;">
+          PNW Floor Design's brand system: logo construction, color palette,
+          typography stack, and responsive logo behavior. Every other deliverable
+          builds on these decisions.
+        </p>
+      </div>
+
+      <!-- Brand identity pages from PDF -->
+      <div class="row g-4" style="margin-top: var(--s-4);">
+        <div class="col-md-6">
+          <img class="img-fluid" src="images/pnw_brand_id_02.png" alt="PNW logo construction" style="width:100%; border-radius:4px; border: 1px solid var(--paper-soft);">
+          <p class="text-center" style="margin-top: var(--s-2); font-size: 0.85rem; color: var(--sepia); letter-spacing: 0.1em; text-transform: uppercase;">Logo Mark</p>
+        </div>
+        <div class="col-md-6">
+          <img class="img-fluid" src="images/pnw_brand_id_03.png" alt="PNW color palette" style="width:100%; border-radius:4px; border: 1px solid var(--paper-soft);">
+          <p class="text-center" style="margin-top: var(--s-2); font-size: 0.85rem; color: var(--sepia); letter-spacing: 0.1em; text-transform: uppercase;">Color Palette</p>
+        </div>
+        <div class="col-md-6">
+          <img class="img-fluid" src="images/pnw_brand_id_04.png" alt="PNW typography stack" style="width:100%; border-radius:4px; border: 1px solid var(--paper-soft);">
+          <p class="text-center" style="margin-top: var(--s-2); font-size: 0.85rem; color: var(--sepia); letter-spacing: 0.1em; text-transform: uppercase;">Typography Stack</p>
+        </div>
+        <div class="col-md-6">
+          <img class="img-fluid" src="images/pnw_brand_id_06.png" alt="PNW responsive logo" style="width:100%; border-radius:4px; border: 1px solid var(--paper-soft);">
+          <p class="text-center" style="margin-top: var(--s-2); font-size: 0.85rem; color: var(--sepia); letter-spacing: 0.1em; text-transform: uppercase;">Responsive Logo</p>
+        </div>
+      </div>
+
+      <!-- Live palette swatches -->
+      <div class="row g-3" style="margin-top: var(--s-5);">
+        <div class="col-md-3"><div class="card h-100"><div class="card-body text-center">
+          <div style="width:100%; height:60px; background:#5A7B69; border-radius:3px; margin-bottom: var(--s-2);"></div>
+          <p style="margin-bottom:0; font-size:0.85rem;"><strong>Green</strong><br>#5A7B69</p>
+        </div></div></div>
+        <div class="col-md-3"><div class="card h-100"><div class="card-body text-center">
+          <div style="width:100%; height:60px; background:#F48A8B; border-radius:3px; margin-bottom: var(--s-2);"></div>
+          <p style="margin-bottom:0; font-size:0.85rem;"><strong>Pink</strong><br>#F48A8B</p>
+        </div></div></div>
+        <div class="col-md-3"><div class="card h-100"><div class="card-body text-center">
+          <div style="width:100%; height:60px; background:#131313; border-radius:3px; margin-bottom: var(--s-2);"></div>
+          <p style="margin-bottom:0; font-size:0.85rem;"><strong>Charcoal</strong><br>#131313</p>
+        </div></div></div>
+        <div class="col-md-3"><div class="card h-100"><div class="card-body text-center">
+          <div style="width:100%; height:60px; background:#FFFFFF; border-radius:3px; margin-bottom: var(--s-2); border: 1px solid var(--paper-soft);"></div>
+          <p style="margin-bottom:0; font-size:0.85rem;"><strong>White</strong><br>#FFFFFF</p>
+        </div></div></div>
+      </div>
+
+      <!-- Full system composition -->
+      <div class="text-center" style="margin-top: var(--s-5);">
+        <h3>System Applied · Logo + Flyer + App + Website</h3>
+      </div>
+      <div class="text-center" style="margin-top: var(--s-3);">
+        <img class="img-fluid" src="images/pnw_brand_showcase.png"
+             alt="PNW Floor Design complete brand showcase"
+             style="max-width: 100%; border-radius: 4px; box-shadow: 0 4px 24px rgba(15,12,10,0.08);">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DELIVERABLES (dark) — app, web, print outputs ============ -->
+  <section class="section section-dark" data-num="02">
+    <div class="container" style="max-width:1100px;">
+      <div class="text-center" style="margin-bottom: var(--s-4);">
+        <span class="eyebrow">Deliverables</span>
+        <h2>The system, <em>applied.</em></h2>
+        <p class="lead" style="max-width: 720px; margin: var(--s-3) auto 0;">
+          Three output streams from the brand system: a 60-screen mobile app, a
+          full marketing website across three iterations, and a three-variant
+          flyer family. Same logo, palette, type, voice.
+        </p>
+      </div>
+
+      <!-- Mobile app -->
+      <div style="margin-top: var(--s-5);">
+        <h3 class="text-center" style="margin-bottom: var(--s-3);">Mobile App · 60 Screens</h3>
+        <div class="text-center">
+          <img class="img-fluid" src="images/plate_pnw_app_screens.png"
+               alt="PNW Floor Design mobile app contact sheet showing 16 high-fidelity screens"
+               style="max-width: 100%; border-radius: 4px; box-shadow: 0 4px 16px rgba(15,12,10,0.30);">
+        </div>
+      </div>
+
+      <!-- Website iterations -->
+      <div style="margin-top: var(--s-5);">
+        <h3 class="text-center" style="margin-bottom: var(--s-3);">Website · Three Iterations</h3>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <img class="img-fluid" src="images/pnw_mvp_page_1.png"
+                 alt="PNW Floor Design website iteration 01"
+                 style="width:100%; border-radius:4px; box-shadow: 0 4px 16px rgba(15,12,10,0.30);">
+            <p class="text-center" style="margin-top: var(--s-2); font-size: 0.85rem; color: var(--sepia); letter-spacing: 0.1em; text-transform: uppercase;">Iteration 01</p>
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid" src="images/pnw_mvp_page_2.png"
+                 alt="PNW Floor Design website iteration 02"
+                 style="width:100%; border-radius:4px; box-shadow: 0 4px 16px rgba(15,12,10,0.30);">
+            <p class="text-center" style="margin-top: var(--s-2); font-size: 0.85rem; color: var(--sepia); letter-spacing: 0.1em; text-transform: uppercase;">Iteration 02</p>
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid" src="images/pnw_mvp_page_3.png"
+                 alt="PNW Floor Design website final iteration"
+                 style="width:100%; border-radius:4px; box-shadow: 0 4px 16px rgba(15,12,10,0.30);">
+            <p class="text-center" style="margin-top: var(--s-2); font-size: 0.85rem; color: var(--sepia); letter-spacing: 0.1em; text-transform: uppercase;">Iteration 03 · Final</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flyer variants -->
+      <div style="margin-top: var(--s-5);">
+        <h3 class="text-center" style="margin-bottom: var(--s-3);">Print · Three Flyer Variants</h3>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <img class="img-fluid" src="images/pnw_flyer_01.png"
+                 alt="PNW Floor Design flyer variant 01"
+                 style="width:100%; border-radius:4px; box-shadow: 0 4px 16px rgba(15,12,10,0.30);">
+            <p class="text-center" style="margin-top: var(--s-2); font-size: 0.85rem; color: var(--sepia); letter-spacing: 0.1em; text-transform: uppercase;">Flyer 01</p>
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid" src="images/pnw_flyer_02.png"
+                 alt="PNW Floor Design flyer variant 02"
+                 style="width:100%; border-radius:4px; box-shadow: 0 4px 16px rgba(15,12,10,0.30);">
+            <p class="text-center" style="margin-top: var(--s-2); font-size: 0.85rem; color: var(--sepia); letter-spacing: 0.1em; text-transform: uppercase;">Flyer 02</p>
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid" src="images/pnw_flyer_03.png"
+                 alt="PNW Floor Design flyer variant 03"
+                 style="width:100%; border-radius:4px; box-shadow: 0 4px 16px rgba(15,12,10,0.30);">
+            <p class="text-center" style="margin-top: var(--s-2); font-size: 0.85rem; color: var(--sepia); letter-spacing: 0.1em; text-transform: uppercase;">Flyer 03</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUTCOME / REFLECTION (cream) ============ -->
+  <section class="section section-cream" data-num="03">
+    <div class="container" style="max-width:1100px;">
+      <div class="text-center" style="margin-bottom: var(--s-4);">
+        <span class="eyebrow">Outcome &amp; Reflection</span>
+        <h2>What this case study <em>proves.</em></h2>
+      </div>
+
+      <div class="row g-3" style="margin-top: var(--s-4);">
+        <div class="col-md-6"><div class="card h-100"><div class="card-body">
+          <h5 style="color: var(--sepia);">What landed</h5>
+          <ul style="line-height: 1.8; font-size: 0.95rem;">
+            <li>Complete brand system from logo to live product</li>
+            <li>End-to-end ownership: brief, IA, design, prototype</li>
+            <li>Pricing tiers grounded in real market positioning</li>
+            <li>Accessibility built in, not bolted on</li>
+            <li>Pak's 8-section creative brief applied verbatim</li>
+          </ul>
+        </div></div></div>
+        <div class="col-md-6"><div class="card h-100"><div class="card-body">
+          <h5 style="color: var(--sepia);">What I would do differently</h5>
+          <ul style="line-height: 1.8; font-size: 0.95rem;">
+            <li>Add testimonials section once the business launches</li>
+            <li>Build a before/after slider with real project photos</li>
+            <li>Reduce competing CTA variants on early iterations earlier</li>
+            <li>Add a financing options block for premium tiers</li>
+            <li>Ship a service-area SEO page per city</li>
+          </ul>
+        </div></div></div>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--s-5);">
+        <blockquote style="font-size: 1.25rem; line-height: 1.5; max-width: 760px; margin: 0 auto; font-style: italic; color: var(--ink);">
+          "Critical thinking is your strongest skill. Build custom design systems to
+          stand out from generic UI components. Strong case studies are the most
+          important strategy."
+        </blockquote>
+        <p style="margin-top: var(--s-3); color: var(--sepia); letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.85rem;">
+          — Professor Min Pak, M.F.A.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING JUMBOTRON ============ -->
+  <div class="container-fluid px-0">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container" style="max-width: 900px;">
+        <span class="eyebrow">Want the Full Walkthrough?</span>
+        <h1 style="font-size: var(--t-mid); margin-bottom: var(--s-3);">
+          Open the live Figma <em>prototype.</em>
+        </h1>
+        <p class="lead">
+          Every screen, every interaction, the full user flow from onboarding to project
+          completion. Interactive.
+        </p>
+        <div style="margin-top: var(--s-4);">
+          <a href="https://www.figma.com/proto/fw5c6pEdpYwUHFTIZIdDGU/PNW-Floor-Apps-and-Website-Design"
+             target="_blank" rel="noopener"
+             class="btn btn-primary btn-lg me-2">Open Figma Prototype</a>
+          <a href="contact.html" class="btn btn-outline-primary btn-lg">Discuss This Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="col-xl-12">
+    &copy; Mila Boyd 2026 &middot; PNW Floor Design LLC Case Study &middot; Pierce College DDSGN 215
+  </footer>
+
+  <script src="js/popper-2.11.8.min.js"></script>
+  <script src="js/bootstrap-5.3.8.js"></script>
+</body>
+</html>

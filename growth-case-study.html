@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="keywords" content="Mila Boyd, growth case study, UX UI, portfolio audit, design systems, Pierce College, DDSGN 215">
+  <meta name="description" content="A case study about rebuilding my own portfolio website, the technical audit, the fixes, and the personal growth behind the work. By Mila Boyd, DDSGN 215, Pierce College.">
+
+  <title>Growth Case Study | Mila Boyd</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap-5.3.8.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/portfolio.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- inherits from css/portfolio.css design system -->
+</head>
+
+<body data-nav="fixed">
+
+  <!-- Navbar (matches your other pages) -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="index.html">Mila Boyd</a>
+
+      <button class="navbar-toggler custom-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        MENU
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">RESUME</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              PORTFOLIO
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="design.html">Graphic Design</a></li>
+              <li><a class="dropdown-item" href="photography.html">Photography</a></li>
+              <li><a class="dropdown-item" href="uxui.html">UX/UI Design</a>
+              <a class="dropdown-item" href="pnw-floor-design.html">PNW Floor Design</a></li>
+              <li><a class="dropdown-item" href="pnw-website-build.html">PNW Website Build</a></li>
+              <li><a class="dropdown-item" href="bridge5.html">Bridge 5 &middot; Bilingual Engine</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="build-case-study.html">Build Case Study</a>
+              <a class="dropdown-item" href="discovery-journal.html">Discovery Journal</a></li>
+              <li><a class="dropdown-item active" href="growth-case-study.html">Growth Case Study</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="growth-hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-xl-9">
+          <span class="eyebrow">Personal Case Study · DDSGN 215 · Spring 2026</span>
+          <h1>Rebuilding My Own Portfolio: <em>a case study in growth.</em></h1>
+          <p class="lead mt-3">
+            Most case studies are about a client. This one is about me. It's the story
+            of how I audited my own portfolio, found a long list of broken things,
+            and rebuilt the site while balancing school, work, medication adjustments,
+            and motherhood. The technical fixes are the surface. The real result is
+            how my mindset changed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ AT A GLANCE ============ -->
+  <section class="container my-5">
+    <div class="row g-3 justify-content-center">
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <h3>9</h3>
+          <p>HTML pages audited</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <h3>30+</h3>
+          <p>Bugs identified &amp; fixed</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <h3>1</h3>
+          <p>New business landing built</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <h3>2</h3>
+          <p>Case studies written</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MY OWN REFLECTION (the heart of the page) ============ -->
+  <section class="section section-cream" data-num="01">
+    <div class="container" style="max-width: 880px;">
+      <span class="eyebrow">In My Own Words</span>
+      <h2>What this portfolio <em>actually is.</em></h2>
+
+      <p class="lead" style="margin-top: var(--s-3);">
+        My portfolio website represents more than just a final class project. It represents
+        my personal growth, resilience, creative identity, and technical development
+        throughout this quarter.
+      </p>
+
+      <p>
+        While building this website, I faced many challenges including broken links,
+        responsive design issues, troubleshooting code, Bootstrap structure problems,
+        navigation fixes, and layout consistency. Instead of giving up, I continued
+        rebuilding, researching, testing, and improving my work step by step.
+      </p>
+
+      <p>
+        One of the biggest things I learned is that UX/UI design is not only about
+        visual beauty. It is also about systems thinking, accessibility, organization,
+        structure, and emotional communication. Through this process I learned how to
+        better understand user experience, hierarchy, responsive layouts, branding
+        consistency, and how design decisions affect usability.
+      </p>
+
+      <p>
+        My portfolio also reflects my creative personality. I wanted the experience
+        to feel immersive, emotional, cinematic, and modern instead of looking like a
+        generic template. I experimented with typography, color depth, visual
+        storytelling, and layout composition to create something that feels more
+        aligned with my identity as a designer. I became more confident using
+        Bootstrap, Figma concepts, layout grids, and content organization while also
+        learning the importance of accessibility and mobile responsiveness.
+      </p>
+
+      <p>
+        Another important part of my growth was learning how to problem solve
+        independently. There were many moments where things failed technically, but
+        every mistake taught me something valuable about coding, file structures,
+        servers, linking systems, and debugging. I also collaborated with and learned
+        from other students and developers, which expanded my understanding of both
+        creative design and technical systems.
+      </p>
+
+      <p style="margin-bottom: 0;">
+        This website is still evolving, but it reflects how much I have grown in
+        creativity, resilience, communication, systems thinking, and UX/UI
+        development. The process challenged me deeply, but it also showed me that I
+        belong in this field and that I can continue growing into a stronger designer
+        and developer.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ THEN AND NOW (the growth comparison) ============ -->
+  <section class="section section-dark" data-num="02">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">Then and Now</span>
+      <h2>What changed <em>inside the work.</em></h2>
+      <p class="lead">
+        The clearest way to describe the growth: I used to make one beautiful thing at
+        a time. Now I build the system the beautiful things come from.
+      </p>
+
+      <div class="row g-4" style="margin-top: var(--s-4);">
+        <div class="col-md-6">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">Before this program</h4>
+            <ul style="line-height: 1.8;">
+              <li>Already creative, observant, emotionally connected to design</li>
+              <li>One artifact at a time. Polish, refine, ship.</li>
+              <li>Strong artistic instincts, but artifact-based not system-based</li>
+              <li>Focused on individual pieces: color, photography, layout, visual feeling</li>
+              <li>"Does this look good?" was the question</li>
+            </ul>
+          </div></div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">After four years and this term</h4>
+            <ul style="line-height: 1.8;">
+              <li>System designer thinking, not only artist thinking</li>
+              <li>I build connected ecosystems, not isolated visuals</li>
+              <li>Colors, spacing, typography, navigation, components as one unified language</li>
+              <li>The token (color, spacing, weight) is the unit of work</li>
+              <li>"Does this decision compound across the product?" is the question</li>
+            </ul>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STRONGEST GROWTH AREAS ============ -->
+  <section class="section section-cream" data-num="03">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">Strongest Growth Areas</span>
+      <h2>Where I leveled up <em>most.</em></h2>
+
+      <div class="row g-4" style="margin-top: var(--s-4);">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">Critical Thinking</h4>
+            <p>I analyze problems deeply instead of decorating surfaces. Professor Min Pak specifically called critical thinking my strongest skill.</p>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">Design Systems Thinking</h4>
+            <p>I learned how colors, spacing, typography, navigation, and components work together as one unified language across an entire product. My UX/UI pages show the transition from single artwork thinking into system thinking.</p>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">Visual Storytelling</h4>
+            <p>My work has emotional atmosphere. The portfolio does not feel generic. The language, typography, photography, and layouts feel cinematic, reflective, warm, and human.</p>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">Resilience and Problem Solving</h4>
+            <p>This case study proves it. I audited broken Bootstrap files, duplicate heads, missing image paths, invalid HTML, broken routing systems, and repaired 30+ bugs. Real developer-level troubleshooting growth.</p>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">Hybrid Thinking</h4>
+            <p>My background in construction, interiors, remodeling, systems, and project coordination gives me a perspective most UX designers do not have. Physical-world expertise plus digital UX thinking is my edge.</p>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">Long-form Case Study Writing</h4>
+            <p>This page, the Build Case Study, the Discovery Journal, the PNW Floor Design app case study, the academic creative brief, all written end to end. Real writing under real constraints.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT I STILL WANT TO GROW IN ============ -->
+  <section class="section section-dark" data-num="04">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">Honest Self-Assessment</span>
+      <h2>Where I'm <em>still growing.</em></h2>
+      <p class="lead">
+        Naming the gaps is part of the work. Here are the four areas I am actively
+        pushing into next.
+      </p>
+
+      <div class="row g-4" style="margin-top: var(--s-4);">
+        <div class="col-md-6">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">Advanced Coding Confidence</h4>
+            <p>I improved a lot with Bootstrap and HTML, but going deeper into CSS architecture, JavaScript behavior, accessibility standards, and responsive engineering will make me much stronger technically.</p>
+          </div></div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">UX Research Documentation</h4>
+            <p>I understand people emotionally. Industry UX also expects structured research artifacts: usability testing, journey maps, accessibility testing, metrics, user validation processes. That documentation discipline is next.</p>
+          </div></div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">Simplification</h4>
+            <p>Sometimes my ideas are so rich and layered that the experience becomes visually dense. Learning when to simplify and reduce will make the strongest ideas even more powerful.</p>
+          </div></div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">Confidence in My Authority</h4>
+            <p>My writing sometimes still sounds like I am proving I belong. My actual work already shows that I belong. The next growth step is speaking with ownership instead of defense.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTEXT ============ -->
+  <section class="container my-5">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-5">
+        <h2>The Context</h2>
+        <p class="text-muted small" style="letter-spacing:.15em; text-transform:uppercase;">Where I started</p>
+      </div>
+      <div class="col-lg-7">
+        <p>
+          I'm a student in the <strong>New Media &amp; Digital Design</strong> program at
+          Pierce College, finishing my AAS in Digital Design with a UX/UI certificate,
+          taking DDSGN&nbsp;215 and 230 with Professor Min Pak. I work full-time as a
+          Senior Designer at Floor &amp; Decor, and I'm raising my daughter.
+        </p>
+        <p>
+          In the months leading up to this audit, three things happened at once:
+          I started a new seizure medication that affected my focus and memory,
+          my daughter developed serious allergy and blood-level issues that required
+          continuous testing, and my classes started piling up faster than I could
+          keep up. My portfolio site had been live for weeks, but I knew, under the
+          surface, that pieces of it were broken.
+        </p>
+        <p class="mb-0">
+          On <strong>May 14, 2026</strong>, I decided to do a real audit. Not a quick
+          glance. A full file-by-file review. What I found is below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUDIT FINDINGS ============ -->
+  <section class="container my-5">
+    <h2 class="mb-4">The Audit, What I Found</h2>
+    <p class="mb-5" style="max-width: 760px;">
+      I went through every HTML file in my portfolio folder, side by side, comparing
+      what each page said against what files actually existed on disk. The pattern
+      that emerged was familiar from Professor Pak's lessons: small inconsistencies
+      compound into a site that "doesn't work" for reasons that look mysterious from
+      the outside.
+    </p>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="issue-card">
+          <span class="tag">Critical · JS</span>
+          <h4>Missing Bootstrap bundle</h4>
+          <p>Three pages, <span class="file">index.html</span>, <span class="file">portfolio.html</span>, <span class="file">graphic_design.html</span>, pointed at <span class="file">js/bootstrap.bundle.min.js</span>, a file that didn't exist. This is the exact issue Professor Pak warned me about on March 4: "Without js, Bootstrap does not work."</p>
+          <p class="mb-0 small text-muted">Result: carousel, dropdowns, mobile menu, all silently broken.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="issue-card">
+          <span class="tag">Critical · Structure</span>
+          <h4>Duplicate &lt;head&gt; inside body</h4>
+          <p><span class="file">resume.html</span> had a second <span class="file">&lt;!DOCTYPE&gt;</span> and a second <span class="file">&lt;head&gt;</span> block <em>inside</em> the body. Browsers tolerate it, but it's invalid HTML and breaks the document model.</p>
+          <p class="mb-0 small text-muted">Result: layout instability and validation errors.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="issue-card">
+          <span class="tag">Critical · Markup</span>
+          <h4>Mangled image tags</h4>
+          <p>Three <span class="file">&lt;img&gt;</span> tags in <span class="file">about.html</span> had two <span class="file">src</span> values smashed together: <span class="file">src="a.jpg"b.JPG""</span>. Likely a Dreamweaver paste accident.</p>
+          <p class="mb-0 small text-muted">Result: cards showed no images on About page.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="issue-card">
+          <span class="tag">Major · Paths</span>
+          <h4>Double-folder image paths</h4>
+          <p><span class="file">portfolio.html</span> referenced <span class="file">images/images/facelogo.png</span>, a double folder path. None of those images loaded. Also referenced files that didn't exist at all: <span class="file">cupcake.png</span>, <span class="file">setwoman.jpg</span>, <span class="file">uiuiiu.PNG</span>.</p>
+          <p class="mb-0 small text-muted">Result: 8 missing images on the portfolio landing.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="issue-card">
+          <span class="tag">Major · Files</span>
+          <h4>Phantom <span class="file">files/</span> folder</h4>
+          <p><span class="file">uxui.html</span> embedded five PDFs from <span class="file">files/PNW_Floor_Design_*.pdf</span> and <span class="file">files/your-training.pdf</span>, a folder that doesn't exist in my project. Also a typo: <span class="file">creativebrief.pdf</span> vs the actual <span class="file">creativebrife.pdf</span>.</p>
+          <p class="mb-0 small text-muted">Result: every case study PDF was a 404.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="issue-card">
+          <span class="tag">Major · Content</span>
+          <h4>Duplicate photo titles</h4>
+          <p>Every one of the 12 cards on <span class="file">photography.html</span> was titled "Black &amp; White Rose, 2026", even though the images were all different (apples, plants, gym lines, blue flag). Copy-paste rot.</p>
+          <p class="mb-0 small text-muted">Result: portfolio looked careless to a reviewer.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="issue-card">
+          <span class="tag">Major · Routing</span>
+          <h4>Empty page at "Graphic Design"</h4>
+          <p>The Portfolio dropdown pointed "Graphic Design" → <span class="file">design.html</span>. But <span class="file">design.html</span> was a placeholder that contained the literal word <span class="file">undefined</span>. The real content lived in <span class="file">graphic_design.html</span>.</p>
+          <p class="mb-0 small text-muted">Result: clicking the nav landed users on a blank page.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="issue-card">
+          <span class="tag">Cleanup · Tags</span>
+          <h4>Unclosed sections</h4>
+          <p>The end of <span class="file">uxui.html</span> had a trail of orphan closing tags: <span class="file">&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;</span>. The case study sections weren't actually nested cleanly.</p>
+          <p class="mb-0 small text-muted">Result: unpredictable rendering, hard to maintain.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="issue-card">
+          <span class="tag">Cleanup · Consistency</span>
+          <h4>Mixed JS filenames</h4>
+          <p>Pages mixed <span class="file">popper-2.11.8.js</span> and <span class="file">popper-2.11.8.min.js</span>, only the <span class="file">.min</span> version actually existed in <span class="file">js/</span>.</p>
+          <p class="mb-0 small text-muted">Result: inconsistent JS loading across pages.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ THE FIXES ============ -->
+  <section class="container my-5">
+    <h2 class="mb-4">The Fixes, File by File</h2>
+
+    <div class="fix-row">
+      <div class="row">
+        <div class="col-md-2"><span class="num">01</span></div>
+        <div class="col-md-10">
+          <h5>Replaced phantom JS bundles with the files that exist</h5>
+          <p class="mb-0">Across <span class="file">index.html</span>, <span class="file">portfolio.html</span>, and <span class="file">graphic_design.html</span> I swapped <span class="file">bootstrap.bundle.min.js</span> for the real pair: <span class="file">popper-2.11.8.min.js</span> + <span class="file">bootstrap-5.3.8.js</span>. This is exactly the recipe Professor Pak sent me in March.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fix-row">
+      <div class="row">
+        <div class="col-md-2"><span class="num">02</span></div>
+        <div class="col-md-10">
+          <h5>Removed the duplicate &lt;head&gt; block inside resume.html</h5>
+          <p class="mb-0">Cut out the second <span class="file">&lt;!DOCTYPE&gt;</span>, <span class="file">&lt;head&gt;</span>, and re-imported link tags that were nested inside the body. Restored a single, valid document.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fix-row">
+      <div class="row">
+        <div class="col-md-2"><span class="num">03</span></div>
+        <div class="col-md-10">
+          <h5>Cleaned all three mangled &lt;img&gt; tags on About</h5>
+          <p class="mb-0">Reduced each <span class="file">src="a.jpg"b.JPG""</span> to a single correct <span class="file">src</span> + matching <span class="file">alt</span> text describing the project.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fix-row">
+      <div class="row">
+        <div class="col-md-2"><span class="num">04</span></div>
+        <div class="col-md-10">
+          <h5>Re-pathed every image on portfolio.html</h5>
+          <p class="mb-0">Removed all <span class="file">images/images/</span> doubles. Swapped non-existent files (<span class="file">cupcake.png</span>, <span class="file">setwoman.jpg</span>, <span class="file">uiuiiu.PNG</span>, etc.) for real images already in the folder: <span class="file">mayacake.jpg</span>, <span class="file">web1.JPG</span>, <span class="file">resized_pinkflower.jpg</span>, and <span class="file">facelogo.jpg</span> (correcting the extension).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fix-row">
+      <div class="row">
+        <div class="col-md-2"><span class="num">05</span></div>
+        <div class="col-md-10">
+          <h5>Rewrote the UX/UI page around files that actually exist</h5>
+          <p class="mb-0">Pointed PDF embeds at <span class="file">images/creativebrife.pdf</span> and <span class="file">images/app.pdf</span>. Replaced phantom <span class="file">files/PNW_Floor_Design_Sitemap.pdf</span> with an inline image of the sitemap (<span class="file">images/web.PNG</span>). Removed the duplicate PNW section and the two unused PDF modals. Closed every open tag.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fix-row">
+      <div class="row">
+        <div class="col-md-2"><span class="num">06</span></div>
+        <div class="col-md-10">
+          <h5>Gave each photography card a unique title</h5>
+          <p class="mb-0">Twelve cards went from twelve copies of "Black &amp; White Rose, 2026" to descriptive titles: <em>White Rose Study, Blue Flag, Apple Still Life, Plant Study, Line &amp; Form, Composition, Lifestyle, Editorial Portrait, Color Study, Mood &amp; Tone, Texture &amp; Detail, Story Frame</em>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fix-row">
+      <div class="row">
+        <div class="col-md-2"><span class="num">07</span></div>
+        <div class="col-md-10">
+          <h5>Rebuilt design.html so the navbar link actually leads somewhere</h5>
+          <p class="mb-0">The "Graphic Design" dropdown item was sending visitors to an empty file. I replaced that placeholder with a full Graphic Design portfolio page, hero, project grid using my <span class="file">drew1</span> series + Dispersion piece + self-identity study, and a clean route into the case study at <span class="file">graphic_design.html</span>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fix-row">
+      <div class="row">
+        <div class="col-md-2"><span class="num">08</span></div>
+        <div class="col-md-10">
+          <h5>Built a proper Graphic Design case study at graphic_design.html</h5>
+          <p class="mb-0">Replaced the empty "Untitled Document" file with a real case study, problem / solution, 4-step process, gallery, result, and a CTA back to design.html and contact.html.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fix-row">
+      <div class="row">
+        <div class="col-md-2"><span class="num">09</span></div>
+        <div class="col-md-10">
+          <h5>Built a new business landing, Lacey Legacy</h5>
+          <p class="mb-0">A standalone <span class="file">business.html</span> as the umbrella front for my UX/UI, creative direction, visual design, photography, web, and consulting services. Parisian Evening palette, custom dark services panel, gradient CTA, working contact section.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fix-row">
+      <div class="row">
+        <div class="col-md-2"><span class="num">10</span></div>
+        <div class="col-md-10">
+          <h5>Fixed the broken Resume PDF download</h5>
+          <p class="mb-0">The "Download Resume (PDF)" button pointed at a file that didn't exist. Replaced it with a working "Print / Save as PDF" action so the resume page itself can be saved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT I LEARNED ============ -->
+  <section class="container my-5">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-5">
+        <h2>What I Learned</h2>
+        <p class="text-muted small" style="letter-spacing:.15em; text-transform:uppercase;">The lessons under the fixes</p>
+      </div>
+      <div class="col-lg-7">
+        <ul class="lesson-list list-unstyled mb-0">
+          <li><strong>File hygiene is design.</strong> Half the bugs weren't visual, they were filename mismatches, double folders, typos. Clean files <em>are</em> a design system.</li>
+          <li><strong>Naming is a UX decision.</strong> "design.html" vs "graphic_design.html" cost me a working nav. Names need to be predictable, not historical.</li>
+          <li><strong>An empty page is a broken contract.</strong> If a link says "Graphic Design" it has to deliver Graphic Design. Anything else is a trust break.</li>
+          <li><strong>Bootstrap fails silently without JS.</strong> The page loads, the layout looks fine, but nothing interactive works. Lesson reinforced from Professor Pak's March email.</li>
+          <li><strong>Copy-paste is a debt.</strong> Twelve photo cards labeled "Black &amp; White Rose" weren't a typo, they were a shortcut I never came back to fix. Shortcuts compound.</li>
+          <li><strong>Audit your own work the way a reviewer would.</strong> File by file. No assumptions. The bugs hiding in your own folder are the ones you stop seeing first.</li>
+          <li><strong>Foundational coding still matters in the AI era.</strong> I could have asked an AI to "make it pretty", but only by reading the source line-by-line did I understand <em>why</em> the site was broken. That understanding compounds.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section class="container my-5">
+    <h2 class="mb-4">Timeline</h2>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="timeline-step">
+          <span class="date">Feb 26 · 2026</span>
+          <h5>The Bootstrap lesson</h5>
+          <p class="mb-0">Got stuck on a Dreamweaver / Bootstrap version conflict. Reached out to Professor Pak. She wrote back: <em>"Without js, Bootstrap does not work."</em> The line stuck.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="timeline-step">
+          <span class="date">Mar 21 · 2026</span>
+          <h5>Deadline extension</h5>
+          <p class="mb-0">Asked Professor Pak for more time on the portfolio submission. She extended to Sunday Mar 23. I committed to 8 pages, css, js, images.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="timeline-step">
+          <span class="date">Apr 25 · 2026</span>
+          <h5>Independent troubleshooting</h5>
+          <p class="mb-0">After days stuck on broken links, figured out that remote sync in Dreamweaver was overwriting good files with old versions. Turned off remote sync, rebuilt structure, secured my work.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="timeline-step">
+          <span class="date">May 5 · 2026</span>
+          <h5>Letter to my professor</h5>
+          <p class="mb-0">Wrote Professor Pak a long letter about new direction, separating personal designer brand from business brand, prioritizing real case studies, treating UX as systems not decoration.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="timeline-step">
+          <span class="date">May 11 · 2026</span>
+          <h5>Pak's reply</h5>
+          <p class="mb-0">She asked me to book the Portfolio 1:1 interview meeting in Starfish. The work for the meeting is what I'm building now.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="timeline-step">
+          <span class="date">May 14 · 2026</span>
+          <h5>This case study</h5>
+          <p class="mb-0">Audited the full site. Fixed 30+ bugs. Built a new business landing. Wrote two case studies. Realized I can name and explain my own growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUOTE ============ -->
+  <section class="container my-5">
+    <div class="quote-block">
+      <p>"Design is not only about visuals, it is about structure, psychology, communication, organization, usability, trust, and solving real problems intentionally."</p>
+      <small>, from my letter to Professor Pak, May 5, 2026</small>
+    </div>
+  </section>
+
+  <!-- ============ NEXT STEPS ============ -->
+  <section class="container my-5">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-5">
+        <h2>What's Next</h2>
+        <p class="text-muted small" style="letter-spacing:.15em; text-transform:uppercase;">The plan I'm walking into</p>
+      </div>
+      <div class="col-lg-7">
+        <ol class="ps-3">
+          <li class="mb-2">Book the <strong>Starfish Portfolio 1:1 interview</strong> with Professor Pak, required and overdue.</li>
+          <li class="mb-2">Complete remaining <strong>DDSGN 215</strong> and <strong>230</strong> assignments, Visual Design Principles, Gestalt, Module II Design System, Figma Product Design, Portfolio Website Plan.</li>
+          <li class="mb-2">Upload all fixed pages to the Pierce server via Dreamweaver "Put."</li>
+          <li class="mb-2">Submit final portfolio link: <a href="https://milaaboyd.pierceadvancedux.com/" target="_blank">milaaboyd.pierceadvancedux.com</a></li>
+          <li class="mb-2">Continue building real client case studies for the Lacey Legacy business arm, construction, remodeling, tile, accessibility-focused UX.</li>
+          <li class="mb-0">Stay honest about the medication adjustment, the family load, and the work load, and keep showing up anyway.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REFLECTION ============ -->
+  <section class="container my-5">
+    <h2 class="mb-3">Reflection</h2>
+    <div class="row">
+      <div class="col-lg-9">
+        <p>
+          I used to think growth in design meant my work would suddenly look more beautiful.
+          What this audit taught me is that growth is quieter than that. It looks like
+          opening a folder you've been avoiding and reading every file line-by-line.
+          It looks like saying "this is broken" without flinching. It looks like fixing
+          the boring stuff before you allow yourself to design the pretty stuff.
+        </p>
+        <p>
+          I'm not a perfect student. I started a serious medication mid-semester, my
+          daughter has been through scary medical testing, and I work full-time at
+          Floor &amp; Decor. There were weeks I couldn't think straight. But the version
+          of me at the end of this case study is calmer, more organized, and more
+          honest about what design is for than the version that started it.
+        </p>
+        <p class="mb-0">
+          That, more than any visual, is what I want my portfolio to prove.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="container text-center my-5">
+    <a class="btn btn-primary btn-lg" href="portfolio.html">Back to Portfolio</a>
+    <a class="btn btn-outline-dark btn-lg ms-2" href="contact.html">Get in Touch</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p>&copy; 2026 Mila Boyd</p>
+  </footer>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="js/popper-2.11.8.min.js"></script>
+  <script src="js/bootstrap-5.3.8.js"></script>
+  <script src="js/translate.js" defer></script>
+
+</body>
+</html>

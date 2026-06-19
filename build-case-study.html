@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="keywords" content="Mila Boyd, portfolio build case study, design system, Bootstrap 5, Dreamweaver, Framer, Pierce College DDSGN 215, Min Pak">
+  <meta name="description" content="Detailed case study documenting the build of Mila Boyd's hybrid designer portfolio. Covers tool selection (Dreamweaver vs Framer), Bootstrap rubric components, custom design system, and technical challenges resolved.">
+
+  <title>Portfolio Build Case Study | Mila Boyd</title>
+
+  <link rel="canonical" href="https://milaaboyd.pierceadvancedux.com/build-case-study.html">
+
+  <link href="css/bootstrap-5.3.8.css" rel="stylesheet">
+  <link href="css/portfolio.css" rel="stylesheet" type="text/css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Case-study specific table styling that inherits design-system colors */
+    .study-table{ width: 100%; border-collapse: collapse; margin: var(--s-3) 0; }
+    .study-table th, .study-table td{
+      padding: .9rem 1.1rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(15,12,10,0.10);
+    }
+    .study-table th{
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .75rem;
+      color: var(--sepia);
+      border-bottom: 1px solid var(--sepia);
+    }
+    .section-dark .study-table th, .section-ink .study-table th{
+      color: var(--sepia);
+      border-bottom-color: var(--sepia);
+    }
+    .section-dark .study-table th, .section-dark .study-table td,
+    .section-ink .study-table th, .section-ink .study-table td{
+      border-bottom-color: var(--sepia-line);
+      color: var(--paper);
+    }
+    .study-table td strong{ color: var(--sepia); }
+    .section-dark .study-table td strong,
+    .section-ink .study-table td strong{ color: var(--amber); }
+
+    /* Big number / metric callout */
+    .metric{
+      font-family: 'Lato', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      line-height: 1;
+      color: var(--sepia);
+      display: block;
+    }
+    .section-dark .metric, .section-ink .metric{ color: var(--amber); }
+    .metric-label{
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: .72rem;
+      color: rgba(15,12,10,0.55);
+      margin-top: .5rem;
+      display: block;
+    }
+    .section-dark .metric-label, .section-ink .metric-label{ color: var(--paper-soft); }
+
+    /* Cover page block */
+    .study-cover{
+      padding: var(--s-7) var(--s-4) var(--s-6);
+      text-align: center;
+    }
+    .study-cover .doc-meta{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: var(--s-3);
+      max-width: 900px;
+      margin: var(--s-5) auto 0;
+      text-align: left;
+    }
+    .study-cover .doc-meta dt{
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: .7rem;
+      color: var(--sepia);
+      margin-bottom: .2rem;
+    }
+    .study-cover .doc-meta dd{
+      font-family: 'Source Serif Pro', serif;
+      font-size: 1rem;
+      color: var(--ink);
+      margin: 0 0 var(--s-2);
+    }
+  </style>
+</head>
+
+<body data-nav="fixed">
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Mila Boyd</a>
+      <button class="navbar-toggler custom-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        MENU
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">RESUME</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PORTFOLIO</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="design.html">Graphic Design</a>
+              <a class="dropdown-item" href="photography.html">Photography</a>
+              <a class="dropdown-item" href="uxui.html">UX/UI Design</a>
+              <a class="dropdown-item" href="pnw-floor-design.html">PNW Floor Design</a>
+              <a class="dropdown-item" href="pnw-website-build.html">PNW Website Build</a>
+              <a class="dropdown-item" href="bridge5.html">Bridge 5 &middot; Bilingual Engine</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item active" href="build-case-study.html">Build Case Study</a>
+              <a class="dropdown-item" href="discovery-journal.html">Discovery Journal</a>
+              <a class="dropdown-item" href="growth-case-study.html">Growth Case Study</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ COVER (cream) ============ -->
+  <section class="section-cream">
+    <div class="study-cover">
+      <span class="eyebrow">Case Study · DDSGN 215</span>
+      <h1>Portfolio Build <em>Case Study.</em></h1>
+      <p class="lead" style="max-width: 760px; margin: var(--s-3) auto 0;">
+        Hybrid Designer Site Development with Bootstrap 5. Tool selection, design system construction,
+        rubric application, and technical problem-solving.
+      </p>
+      <dl class="doc-meta">
+        <div>
+          <dt>Course</dt>
+          <dd>DDSGN 215 · Advanced UX Design</dd>
+        </div>
+        <div>
+          <dt>Instructor</dt>
+          <dd>Professor Min Pak, M.F.A.</dd>
+        </div>
+        <div>
+          <dt>Student</dt>
+          <dd>Mila Boyd · ID 201605377</dd>
+        </div>
+        <div>
+          <dt>Live Deliverable</dt>
+          <dd><a href="https://milaaboyd.pierceadvancedux.com/">milaaboyd.pierceadvancedux.com</a></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ ABSTRACT (dark) ============ -->
+  <section class="section section-dark" data-num="00">
+    <div class="container" style="max-width: 900px;">
+      <span class="eyebrow">Abstract</span>
+      <h2>What this <em>document covers.</em></h2>
+      <p class="lead">
+        This case study documents the process, design decisions, technical challenges, and outcomes of
+        building a hybrid-designer portfolio site for the DDSGN 215 Advanced UX Design course. It covers
+        the tool selection decision (Adobe Dreamweaver versus Framer), application of Bootstrap 5 rubric
+        components, the authoring of a custom design system, and the resolution of upload-blocking issues
+        that prevented the site from going live on the first attempt. The portfolio is now live and meets
+        the course's Bootstrap component requirements.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 001 — PROJECT CONTEXT (cream) ============ -->
+  <section class="section section-cream" data-num="01">
+    <div class="container" style="max-width: 900px;">
+      <span class="eyebrow">Project Context</span>
+      <h2>Who, what, <em>and why.</em></h2>
+      <p class="lead">
+        I am a hybrid designer with ten-plus years of physical-space and interior design experience,
+        transitioning into UX/UI through Pierce College's AAS Digital Design and UX/UI Certificate.
+      </p>
+      <p>
+        Professor Pak's formal feedback to me has been the foundation of this build:
+      </p>
+      <blockquote>
+        "Critical thinking is your strongest skill. Build custom design systems to stand out from
+        generic UI components. Strong case studies are the most important strategy."
+      </blockquote>
+      <p>
+        The deliverable for this milestone is a public portfolio site that demonstrates mastery of the
+        Bootstrap 5 components covered in class: buttons, cards, carousel, jumbotron, navbar, and the
+        12-column responsive grid.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 002 — TOOL SELECTION (dark) ============ -->
+  <section class="section section-dark" data-num="02">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">Tool Selection</span>
+      <h2>Dreamweaver vs. <em>Framer.</em></h2>
+      <p class="lead">
+        A primary methodological choice was which build platform to use. I evaluated two paths.
+      </p>
+
+      <table class="study-table">
+        <thead>
+          <tr><th>Platform</th><th>Strengths</th><th>Weaknesses</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Framer</strong> (no-code visual builder)</td>
+            <td>Fast time-to-publish, built-in hosting, auto-responsive components</td>
+            <td>Generated code is opaque, does not demonstrate hand-coded Bootstrap, does not satisfy the DDSGN 215 rubric</td>
+          </tr>
+          <tr>
+            <td><strong>Adobe Dreamweaver</strong> (code + design hybrid IDE)</td>
+            <td>Real HTML/CSS authoring, Bootstrap-aware code hints, built-in SFTP to the Pierce server, full ownership of every line</td>
+            <td>Slower to publish, the student must debug their own code</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4 style="margin-top: var(--s-4);">Decision: Dreamweaver</h4>
+      <p>
+        Framer would have produced a working site in an afternoon, but the course outcome is to
+        demonstrate hand-coded Bootstrap mastery, not platform configuration. The trade-off was speed
+        in exchange for skill demonstration.
+      </p>
+
+      <h4>Reference inspiration</h4>
+      <p>
+        A site called <em>Flat White</em> (hosted on Framer at <code>flat-white.framer.website</code>)
+        was studied as a visual reference for restraint: numbered section system, generous whitespace,
+        single-typography hierarchy, and minimal call-to-action treatments. None of Flat White's code
+        was used. Only the editorial language was borrowed and re-implemented in Bootstrap.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 003 — RUBRIC COMPONENTS (cream) ============ -->
+  <section class="section section-cream" data-num="03">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">Rubric Components</span>
+      <h2>Bootstrap 5 elements <em>shipped.</em></h2>
+      <p class="lead">
+        All Bootstrap 5 components covered in the Bootstrap Components lecture are present on the
+        home page.
+      </p>
+      <div class="row g-4" style="margin-top: var(--s-4);">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Carousel</h4>
+              <p class="card-text">Three slides with indicators and prev/next controls.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Card Row</h4>
+              <p class="card-text">Three discipline cards using <code>.card</code>, <code>.card-img-top</code>, <code>.card-body</code>, <code>.card-title</code>, <code>.card-text</code>.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Full Button Set</h4>
+              <p class="card-text">All nine <code>.btn</code> color classes, all eight <code>.btn-outline-*</code> variants, three sizes (<code>.btn-lg</code>, default, <code>.btn-sm</code>), shown in a dedicated Design System section.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Jumbotron-fluid</h4>
+              <p class="card-text">Closing call-to-action band, full-width on every page.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">12-Column Flexbox Grid</h4>
+              <p class="card-text">Responsive <code>col-md</code> and <code>col-xl</code> breakpoints with <code>justify-content</code> centering.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Fixed-top Navbar</h4>
+              <p class="card-text">Dropdown menu, mobile hamburger toggle, active link state.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 004 — DESIGN SYSTEM (dark) ============ -->
+  <section class="section section-dark" data-num="04">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">Custom Design System</span>
+      <h2>Discipline, <em>not decoration.</em></h2>
+      <p class="lead">
+        In direct response to Professor Pak's feedback that critical thinking and a custom design
+        system differentiate strong portfolios from generic ones, a strict system was authored in a
+        single CSS file: <code>css/portfolio.css</code>. Every page inherits from this file. No page
+        contains inline color or font overrides.
+      </p>
+
+      <h4 style="margin-top: var(--s-4);">Self-imposed limits</h4>
+      <div class="row g-3 text-center" style="margin-top: var(--s-3);">
+        <div class="col-6 col-md">
+          <span class="metric">5</span>
+          <span class="metric-label">colors total</span>
+        </div>
+        <div class="col-6 col-md">
+          <span class="metric">2</span>
+          <span class="metric-label">fonts total</span>
+        </div>
+        <div class="col-6 col-md">
+          <span class="metric">3</span>
+          <span class="metric-label">type sizes</span>
+        </div>
+        <div class="col-6 col-md">
+          <span class="metric">2</span>
+          <span class="metric-label">radius values</span>
+        </div>
+        <div class="col-6 col-md">
+          <span class="metric">3px</span>
+          <span class="metric-label">max hover lift</span>
+        </div>
+      </div>
+
+      <p style="margin-top: var(--s-4);">
+        <strong>Rationale.</strong> Restraint reads as class. Token sprawl reads as vibe-coding.
+        Fewer perceived choices increase the appearance of intention. These limits made every
+        decision deliberate rather than improvised.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 005 — CHALLENGES (cream) ============ -->
+  <section class="section section-cream" data-num="05">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">Technical Challenges</span>
+      <h2>What broke, <em>what I fixed.</em></h2>
+
+      <div class="row g-4" style="margin-top: var(--s-4);">
+
+        <div class="col-md-6">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">5.1 · Upload rejection</h4>
+            <p><strong>Problem.</strong> Case study PDF was 153 MB. Server rejected at the size gate.</p>
+            <p><strong>Resolution.</strong> Re-encoded all 253 embedded images as JPEG quality 72 via PyMuPDF, saved with garbage collection and stream deflation.</p>
+            <p><strong>Outcome.</strong> 153 MB to 14 MB (91% reduction). All 60 pages preserved. Full local backup retained.</p>
+          </div></div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">5.2 · SFTP-unsafe filenames</h4>
+            <p><strong>Problem.</strong> 29 image files had names with spaces, commas, parentheses (e.g. <code>ChatGPT Image May 14, 2026, 08_01_51 PM.png</code>).</p>
+            <p><strong>Resolution.</strong> Programmatically renamed all 29 files to web-safe equivalents, updated 18 HTML references across 6 pages in one pass.</p>
+            <p><strong>Outcome.</strong> Zero broken image links after rename.</p>
+          </div></div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">5.3 · Invisible text on About</h4>
+            <p><strong>Problem.</strong> Three pillar cards rendered cream text on a white background. Technically present, completely unreadable.</p>
+            <p><strong>Resolution.</strong> Rewrote <code>about.html</code> using only design system classes. Removed all inline color overrides.</p>
+            <p><strong>Outcome.</strong> Full readability restored.</p>
+          </div></div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">5.4 · Legacy style pollution</h4>
+            <p><strong>Problem.</strong> Five secondary pages still contained <code>&lt;style&gt;</code> blocks with retired Parisian Evening color tokens.</p>
+            <p><strong>Resolution.</strong> Stripped duplicate <code>&lt;style&gt;</code> blocks from all five pages and replaced retired variable names with active design system tokens site-wide.</p>
+            <p><strong>Outcome.</strong> All twelve pages now inherit from a single source of truth.</p>
+          </div></div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">5.5 · Em-dash overuse</h4>
+            <p><strong>Problem.</strong> 131 em-dashes across 10 HTML files. A recognized AI/vibe-coded stylistic tell per a 500-site audit.</p>
+            <p><strong>Resolution.</strong> Replaced contextually with periods, commas, or colons via a single Python pass.</p>
+            <p><strong>Outcome.</strong> Copy reads as intentional, not generated.</p>
+          </div></div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100"><div class="card-body">
+            <h4 class="card-title">5.6 · Accidental asset deletion</h4>
+            <p><strong>Problem.</strong> Over-aggressive cleanup deleted the case study PDF, a portrait, and two graphic design samples that were still referenced.</p>
+            <p><strong>Resolution.</strong> Recovered PDF backup from Desktop. Recovered portrait from Downloads. For two truly lost files, swapped HTML references to existing similar images.</p>
+            <p><strong>Process improvement.</strong> Adopted a non-destructive workflow: deprecated files now move to <code>_excluded_from_upload/</code> rather than being deleted.</p>
+          </div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 006 — TOOLS (dark) ============ -->
+  <section class="section section-dark" data-num="06">
+    <div class="container" style="max-width: 1100px;">
+      <span class="eyebrow">Tools &amp; Technologies</span>
+      <h2>Everything <em>I used.</em></h2>
+
+      <table class="study-table">
+        <thead>
+          <tr><th>Category</th><th>Tool</th><th>Use</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Code editor + FTP</strong></td>
+            <td>Adobe Dreamweaver 2021</td>
+            <td>HTML/CSS authoring; SFTP transfer to Pierce server</td>
+          </tr>
+          <tr>
+            <td><strong>Framework</strong></td>
+            <td>Bootstrap 5.3.8</td>
+            <td>UI components and 12-column grid</td>
+          </tr>
+          <tr>
+            <td><strong>PDF compression</strong></td>
+            <td>Adobe Acrobat, PyMuPDF (Python)</td>
+            <td>Reduced 153 MB case study PDF to 14 MB</td>
+          </tr>
+          <tr>
+            <td><strong>Image editing</strong></td>
+            <td>Adobe Photoshop</td>
+            <td>Cropping, background cleanup</td>
+          </tr>
+          <tr>
+            <td><strong>Code assistant</strong></td>
+            <td>Claude AI</td>
+            <td>Pair-coding for design system architecture, debugging, copy review. Design decisions, brand voice, and structure remained mine.</td>
+          </tr>
+          <tr>
+            <td><strong>Programmatic file ops</strong></td>
+            <td>Python 3.14, paramiko SSH library</td>
+            <td>Batch filename normalization; recursive SFTP upload</td>
+          </tr>
+          <tr>
+            <td><strong>Terminal</strong></td>
+            <td>Git Bash</td>
+            <td>Script execution</td>
+          </tr>
+          <tr>
+            <td><strong>Local preview</strong></td>
+            <td>Python <code>http.server</code></td>
+            <td>Verifying rendering before deployment</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ 007 — REFLECTION (cream) ============ -->
+  <section class="section section-cream" data-num="07">
+    <div class="container" style="max-width: 900px;">
+      <span class="eyebrow">Reflection</span>
+      <h2>What this build <em>taught me.</em></h2>
+
+      <h4 style="margin-top: var(--s-4);">Discipline came from the constraints, not the freedom.</h4>
+      <p>
+        Limiting the system to 5 colors, 2 fonts, and 3 type sizes was harder than designing with
+        unlimited choices, and produced a stronger result. Every decision had to be considered.
+      </p>
+
+      <h4>Tool selection is an act of self-respect.</h4>
+      <p>
+        Framer would have shipped a "nice looking" site in an afternoon. Choosing Dreamweaver meant I
+        leave this class able to read and write my own markup. The right tool is the one that grows
+        the maker.
+      </p>
+
+      <h4>Restraint reads as class.</h4>
+      <p>
+        The audit of 500 vibe-coded sites confirmed something I sensed: the difference between a
+        generic portfolio and a senior-feeling one is mostly subtraction. No glowing hovers. No purple
+        gradients. No emoji headings. No fake testimonials. Discipline reads on the page.
+      </p>
+
+      <h4>The design system survives the maker's mistakes.</h4>
+      <p>
+        When assets were accidentally deleted, the single-source design system made recovery linear:
+        identify the missing file, replace the reference, ship. A page-by-page custom-style approach
+        would have required hunting through every file.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 008 — WHAT'S NEXT (dark) ============ -->
+  <section class="section section-dark" data-num="08">
+    <div class="container" style="max-width: 900px;">
+      <span class="eyebrow">Outstanding Work</span>
+      <h2>What I'm <em>building next.</em></h2>
+      <ul style="font-size: 1.1rem; line-height: 1.8;">
+        <li>Additional product design case studies (Professor Pak noted 3 to 4 are needed for a strong portfolio).</li>
+        <li>Expanded photography case studies on <code>photography.html</code>.</li>
+        <li>Final readability QA on real laptop screens.</li>
+        <li>One more pass aligning the resume page to the design system.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 009 — CONCLUSION JUMBOTRON ============ -->
+  <div class="container-fluid px-0">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container" style="max-width: 900px;">
+        <span class="eyebrow">Conclusion</span>
+        <h1 style="font-size: var(--t-mid); margin-bottom: var(--s-3);">
+          The site is live, <em>the system holds.</em>
+        </h1>
+        <p class="lead">
+          The portfolio is live, structurally sound, and built on a defensible design system.
+          The Bootstrap rubric is met. The tool decision is documented. The remaining work is
+          content depth, additional case studies, rather than infrastructure.
+        </p>
+        <p>
+          Thank you to Professor Pak for the direct feedback throughout this term. The discipline
+          you pushed me toward shaped every visible and invisible decision in this build.
+        </p>
+        <div style="margin-top: var(--s-4);">
+          <a href="https://milaaboyd.pierceadvancedux.com/" class="btn btn-primary btn-lg me-2">Visit Live Site</a>
+          <a href="resume.html" class="btn btn-outline-primary btn-lg">See Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    &copy; Mila Boyd 2026 &middot; Designer Portfolio &middot; Pierce College DDSGN 215
+  </footer>
+
+  <script src="js/popper-2.11.8.min.js"></script>
+  <script src="js/bootstrap-5.3.8.js"></script>
+  <script src="js/translate.js" defer></script>
+</body>
+</html>
