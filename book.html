@@ -203,12 +203,16 @@
           <p>I have received your inquiry and will respond within two business days. If anything is urgent, email <a href="mailto:MilaBoyd1991@gmail.com" style="color: var(--forest); font-weight: 600;">MilaBoyd1991@gmail.com</a> directly.</p>
         </div>
 
+        <div id="errorPanel" role="alert" aria-live="polite" style="display: none; padding: var(--s-3); background: rgba(201, 163, 154, 0.15); border: 1px solid var(--rose); border-radius: var(--r-soft); margin-bottom: var(--s-3); font-size: 0.92rem;">
+          <strong>Inquiry could not send.</strong> Please try again, or email <a href="mailto:MilaBoyd1991@gmail.com" style="color: var(--forest); font-weight: 600;">MilaBoyd1991@gmail.com</a> directly.
+        </div>
+
         <form class="inquiry" id="inquiryForm"
               action="https://formspree.io/f/YOUR_FORMSPREE_ID"
               method="POST">
           <input type="hidden" name="_subject" value="New inquiry from milaboyd1991.github.io">
           <input type="hidden" name="_next" value="https://milaboyd1991.github.io/book.html?sent=ok">
-          <input type="text" name="_gotcha" style="display: none;" tabindex="-1" autocomplete="off">
+          <input type="text" name="_gotcha" style="display: none;" tabindex="-1" autocomplete="off" aria-hidden="true">
 
           <div class="row-2">
             <div class="row">
@@ -350,9 +354,13 @@
   </footer>
 
   <script>
-    // Formspree handles the POST and the email delivery. After a successful
-    // submission Formspree redirects back to ?sent=ok which triggers the
-    // confirmation panel below. The form's action attribute holds the endpoint.
+    // Two submit paths.
+    //   1. Formspree not yet activated, action still contains YOUR_FORMSPREE_ID.
+    //      Fall back to a prefilled mailto so the form still works during setup.
+    //   2. Formspree activated. Intercept submit, POST via fetch, swap to the
+    //      success panel without a page reload. On network or server error,
+    //      reveal the inline error panel and re-enable the submit button so
+    //      the user can retry or copy the email address.
     (function(){
       const params = new URLSearchParams(window.location.search);
       if (params.get('sent') === 'ok'){
@@ -361,16 +369,18 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      // If the Formspree endpoint has not been activated yet, fall back to a
-      // mailto inquiry so the form still works during setup.
       const form = document.getElementById('inquiryForm');
-      if (form && form.action.indexOf('YOUR_FORMSPREE_ID') !== -1){
-        form.addEventListener('submit', function(e){
+      if (!form) return;
+      const isUnactivated = form.action.indexOf('YOUR_FORMSPREE_ID') !== -1;
+      const errorPanel = document.getElementById('errorPanel');
+      const successPanel = document.getElementById('successPanel');
+
+      form.addEventListener('submit', async function(e){
+        // Mailto fallback path: Formspree endpoint hasn't been activated yet.
+        if (isUnactivated){
           e.preventDefault();
           const data = new FormData(form);
-          const lines = [];
-          lines.push('Hi Mila,');
-          lines.push('');
+          const lines = ['Hi Mila,', ''];
           ['name','email','company','project_type','budget','timeline','brief'].forEach(function(k){
             const v = data.get(k);
             if (v) lines.push(k.replace('_',' ') + ': ' + v);
@@ -378,8 +388,43 @@
           const subject = encodeURIComponent('New inquiry from ' + (data.get('name') || 'the website'));
           const body = encodeURIComponent(lines.join('\n'));
           window.location.href = 'mailto:MilaBoyd1991@gmail.com?subject=' + subject + '&body=' + body;
-        });
-      }
+          return;
+        }
+
+        // Live Formspree path: optimistic UI with fetch.
+        e.preventDefault();
+        if (errorPanel) errorPanel.style.display = 'none';
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalLabel = submitBtn ? submitBtn.textContent : '';
+        if (submitBtn){
+          submitBtn.textContent = 'Sending...';
+          submitBtn.disabled = true;
+        }
+
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { Accept: 'application/json' }
+          });
+          if (res.ok){
+            if (successPanel) successPanel.style.display = 'block';
+            form.style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
+            throw new Error('Form server returned ' + res.status);
+          }
+        } catch (err){
+          if (errorPanel){
+            errorPanel.style.display = 'block';
+            errorPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          if (submitBtn){
+            submitBtn.textContent = originalLabel;
+            submitBtn.disabled = false;
+          }
+        }
+      });
     })();
   </script>
 

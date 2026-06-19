@@ -881,3 +881,67 @@ hr.rule{
   margin: 0;
   max-width: 320px;
 }
+
+/* ---------- 15. Focus states (accessibility) ---------- */
+/* Single visible focus ring across interactive primitives.
+   Gold reads cleanly on both cream and forest/espresso surfaces. */
+.back-link:focus-visible,
+.btn:focus-visible,
+.nav-cta:focus-visible,
+.nav-brand:focus-visible,
+.nav-links a:focus-visible,
+.practice-card:focus-visible,
+.work-card:focus-visible,
+.site-footer a:focus-visible,
+.contact-card a.email:focus-visible{
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: var(--r-soft);
+}
+.section-forest a:focus-visible,
+.section-espresso a:focus-visible{
+  outline-color: var(--cream);
+}
+/* Form inputs and selects get a bottom-border emphasis, not an outline */
+form.inquiry input:focus-visible,
+form.inquiry select:focus-visible,
+form.inquiry textarea:focus-visible{
+  outline: 0;
+  border-bottom-color: var(--gold);
+  border-bottom-width: 2px;
+}
+
+/* ---------- 16. Print stylesheet ---------- */
+@media print{
+  .nav, .nav-toggle, .site-footer, .cta-close, .cta-row, .back-link{
+    display: none !important;
+  }
+  body{ background: #fff !important; color: #000 !important; }
+  .section, .section-tight, .hero, .hero-two-col{
+    padding: 1.5em 0 !important;
+  }
+  .section-forest, .section-espresso{
+    background: #fff !important; color: #000 !important;
+  }
+  .section-forest h1, .section-forest h2, .section-forest h3,
+  .section-espresso h1, .section-espresso h2, .section-espresso h3,
+  .section-forest p, .section-forest li, .section-forest .lead,
+  .section-espresso p, .section-espresso li, .section-espresso .lead{
+    color: #000 !important;
+  }
+  blockquote{ border-left-color: #000 !important; color: #000 !important; }
+  em{ color: #000 !important; font-style: italic; }
+  /* Show URLs after external links so a printed case study is still navigable */
+  a[href^="http"]::after{
+    content: " (" attr(href) ")";
+    font-family: monospace;
+    font-size: 0.78em;
+    color: #555;
+  }
+  /* Keep decision blocks and meta strip together on one page when possible */
+  .decision-block, .meta-strip, .cred-card, blockquote{
+    page-break-inside: avoid;
+  }
+  h1, h2, h3{ page-break-after: avoid; }
+  .hero-two-col .portrait, .story-image, .profile-image{ display: none; }
+}
