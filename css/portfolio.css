@@ -727,6 +727,73 @@ hr.rule{
   margin-bottom: var(--s-3);
 }
 
+/* Decision blocks for case studies, Constraint -> Decision -> Outcome pattern */
+.decision-block{
+  padding: var(--s-6) 0;
+  border-top: 1px solid var(--gold);
+}
+.decision-block:first-of-type{ border-top: 1px solid var(--gold); }
+.decision-block .block-head{
+  margin-bottom: var(--s-4);
+}
+.decision-block .block-num{
+  font-family: 'Inter', sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  display: block;
+  margin-bottom: var(--s-1);
+}
+.decision-block .block-head h2{
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+.decision-block .block-steps{
+  position: relative;
+  padding-left: var(--s-4);
+  border-left: 1px solid var(--gold-soft);
+  margin-left: var(--s-1);
+}
+.decision-block .block-step{
+  padding: var(--s-2) 0 var(--s-3);
+  position: relative;
+}
+.decision-block .block-step::before{
+  content: "";
+  position: absolute;
+  left: calc(var(--s-4) * -1);
+  top: var(--s-3);
+  width: 9px;
+  height: 9px;
+  border-radius: var(--r-pill);
+  background: var(--gold);
+  transform: translateX(4px);
+}
+.decision-block .step-label{
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  display: block;
+  margin-bottom: var(--s-1);
+}
+.decision-block .block-step p{
+  margin: 0;
+  color: var(--espresso);
+  line-height: 1.7;
+  max-width: var(--w-prose);
+}
+.section-forest .decision-block,
+.section-espresso .decision-block{ border-top-color: var(--gold); }
+.section-forest .decision-block .block-steps,
+.section-espresso .decision-block .block-steps{ border-left-color: var(--gold-soft); }
+.section-forest .decision-block .block-step p,
+.section-espresso .decision-block .block-step p{ color: var(--cream); }
+
 /* ---------- 11. Roots statement block ---------- */
 .roots-statement{
   text-align: center;
