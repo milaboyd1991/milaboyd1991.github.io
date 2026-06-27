@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Private project index — Blue Sky Private Jet / Flion Research & Consulting LLC.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Project Index · Prepared for Fadi</title>
+
+  <link rel="canonical" href="https://milaboyd1991.github.io/fadi-projects.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="css/portfolio.css" rel="stylesheet">
+
+  <style>
+    /* Page-local layout only. Inherits portfolio.css tokens. */
+
+    /* Password gate overlay */
+    .gate{
+      position: fixed; inset: 0; z-index: 1000;
+      background: var(--espresso);
+      display: flex; align-items: center; justify-content: center; padding: var(--s-3);
+    }
+    .gate-card{
+      width: 100%; max-width: 420px; text-align: center;
+      background: var(--cream); border-radius: var(--r-soft);
+      padding: var(--s-6) var(--s-5);
+    }
+    .gate-card .eyebrow{ color: var(--gold); display: block; margin-bottom: var(--s-2); }
+    .gate-card h1{ font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 var(--s-2); }
+    .gate-card p{ color: var(--espresso-soft); font-size: 0.92rem; margin: 0 0 var(--s-4); }
+    .gate-form{ display: flex; flex-direction: column; gap: var(--s-2); }
+    .gate-form input{
+      font-family: 'Inter', sans-serif; font-size: 1rem;
+      padding: 0.85rem 1rem; border: 1px solid var(--espresso-hair);
+      border-radius: var(--r-soft); background: #fff; color: var(--espresso);
+      text-align: center; letter-spacing: 0.1em;
+    }
+    .gate-form input:focus{ outline: none; border-color: var(--gold); }
+    .gate-error{ color: var(--rose); font-size: 0.82rem; min-height: 1.1em; margin: 0; }
+
+    body.locked{ overflow: hidden; }
+    #vault{ display: none; }
+    body.unlocked #vault{ display: block; }
+    body.unlocked .gate{ display: none; }
+
+    /* Project list */
+    .proj{
+      display: grid; grid-template-columns: auto 1fr auto; gap: var(--s-3);
+      align-items: start; padding: var(--s-4) 0; border-top: 1px solid var(--espresso-hair);
+    }
+    .proj:last-child{ border-bottom: 1px solid var(--espresso-hair); }
+    @media (max-width: 680px){ .proj{ grid-template-columns: 1fr; gap: var(--s-1); } }
+    .proj .idx{ font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--gold); line-height: 1.1; }
+    .proj h3{ margin: 0 0 0.3rem; font-size: 1.45rem; }
+    .proj p{ margin: 0; color: var(--espresso-soft); font-size: 0.95rem; }
+    .proj .tags{ margin-top: var(--s-1); display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .proj .tag{
+      font-family: 'Inter', sans-serif; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--espresso-soft); border: 1px solid var(--espresso-hair); border-radius: var(--r-pill);
+      padding: 0.25rem 0.7rem;
+    }
+    .proj .pages{ font-family: 'Cormorant Garamond', serif; color: var(--gold); font-size: 1.2rem; white-space: nowrap; }
+    @media (max-width: 680px){ .proj .pages{ font-size: 1rem; } }
+    .summary-band{
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-4);
+      padding: var(--s-4) 0 var(--s-5); margin-bottom: var(--s-2);
+      border-bottom: 1px solid var(--espresso-hair);
+    }
+    @media (max-width: 680px){ .summary-band{ grid-template-columns: repeat(2, 1fr); gap: var(--s-3); } }
+    .summary-band .figure{ font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(2rem,4vw,2.8rem); color: var(--gold); line-height: 1; display: block; }
+    .summary-band .label{ font-family: 'Inter', sans-serif; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--espresso-mute); }
+    .boundary-note{ border-left: 2px solid var(--gold); padding: var(--s-2) 0 var(--s-2) var(--s-3); color: var(--espresso-soft); font-size: 0.9rem; }
+  </style>
+</head>
+<body class="locked">
+
+  <!-- ============ PASSWORD GATE ============ -->
+  <div class="gate" id="gate">
+    <div class="gate-card">
+      <span class="eyebrow">Private · Prepared for Fadi</span>
+      <h1>Project Index</h1>
+      <p>This page is protected. Enter the password to view the project list.</p>
+      <form class="gate-form" id="gateForm" autocomplete="off">
+        <input type="password" id="gatePass" placeholder="Password" aria-label="Password" autofocus>
+        <p class="gate-error" id="gateError" role="alert"></p>
+        <button type="submit" class="btn btn-primary">Unlock</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============ VAULT (revealed after unlock) ============ -->
+  <div id="vault">
+
+    <nav class="nav">
+      <div class="container">
+        <a class="nav-brand" href="index.html">Mila Boyd</a>
+        <ul class="nav-links">
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="consulting.html">Consulting</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="roots.html">Roots</a></li>
+        </ul>
+        <a class="nav-cta" href="book.html">Book a Call</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="container">
+        <span class="eyebrow">Private Resource · Blue Sky Private Jet / Flion</span>
+        <h1>Fadi's <em>project index.</em></h1>
+        <p class="lead">
+          Every deliverable produced for the Blue Sky Private Jet partnership opportunity, in one place. A complete
+          business-development program built across eight documents and more than 250 pages, in English and Arabic.
+        </p>
+      </div>
+    </header>
+
+    <section class="section-tight">
+      <div class="container">
+
+        <div class="summary-band">
+          <div><span class="figure">8</span><span class="label">Documents</span></div>
+          <div><span class="figure">250+</span><span class="label">Pages</span></div>
+          <div><span class="figure">EN / AR</span><span class="label">Bilingual</span></div>
+          <div><span class="figure">30+</span><span class="label">Verified contacts</span></div>
+        </div>
+
+        <div class="proj">
+          <span class="idx">01</span>
+          <div>
+            <h3>Aviation Company Buildout — Master Plan</h3>
+            <p>The full strategic buildout: a lean partnership and business-development model, the hiring order, the capital path, and the Nevada / Pacific Northwest execution strategy from day one to a funded decision.</p>
+            <div class="tags"><span class="tag">Strategy</span><span class="tag">Master plan</span><span class="tag">English</span></div>
+          </div>
+          <span class="pages">100 pp</span>
+        </div>
+
+        <div class="proj">
+          <span class="idx">02</span>
+          <div>
+            <h3>Aviation Partnership Buildout Manual</h3>
+            <p>Government capital, export support, staffing, legal, and technology directory — with the loan / reimbursement / counseling map, a role-filling directory, outreach scripts, compliance guardrails, and a verified public-source appendix.</p>
+            <div class="tags"><span class="tag">Government capital</span><span class="tag">Staffing</span><span class="tag">English</span></div>
+          </div>
+          <span class="pages">50 pp</span>
+        </div>
+
+        <div class="proj">
+          <span class="idx">03</span>
+          <div>
+            <h3>Aviation Role, Capital &amp; Resource Directory</h3>
+            <p>A role-by-role staffing directory paired with the capital resources and the full contact directory across government, export, recruiting, and aviation legal counsel.</p>
+            <div class="tags"><span class="tag">Roles</span><span class="tag">Resources</span><span class="tag">English</span></div>
+          </div>
+          <span class="pages">45 pp</span>
+        </div>
+
+        <div class="proj">
+          <span class="idx">04</span>
+          <div>
+            <h3>Aviation Path — Government Funding &amp; Staffing Manual</h3>
+            <p>A condensed path through the realistic government funding options and the staffing order, written so the opportunity can move without wading through the full manuals.</p>
+            <div class="tags"><span class="tag">Funding</span><span class="tag">Staffing</span><span class="tag">English</span></div>
+          </div>
+          <span class="pages">25 pp</span>
+        </div>
+
+        <div class="proj">
+          <span class="idx">05</span>
+          <div>
+            <h3>Strategic Aviation Partnership Research Dossier</h3>
+            <p>A consolidated, Fadi-facing strategic dossier — English followed by Arabic — that pulls the research, the partner strategy, and the next steps into one send-ready file.</p>
+            <div class="tags"><span class="tag">Research dossier</span><span class="tag">English + Arabic</span></div>
+          </div>
+          <span class="pages">EN / AR</span>
+        </div>
+
+        <div class="proj">
+          <span class="idx">06</span>
+          <div>
+            <h3>Professional Guide (Bilingual)</h3>
+            <p>A bilingual professional guide to the opportunity and the business-development approach, written for sharing with Kuwait-side stakeholders in both English and Arabic.</p>
+            <div class="tags"><span class="tag">Guide</span><span class="tag">English + Arabic</span></div>
+          </div>
+          <span class="pages">17 pp</span>
+        </div>
+
+        <div class="proj">
+          <span class="idx">07</span>
+          <div>
+            <h3>Hiring, Licensing &amp; Compliance Addendum</h3>
+            <p>Where to find licensed aviation employees, which government offices and applications matter, the U.S. Part 135 framework, and the Kuwait DGCA licensing questions — with a clean division of who does what.</p>
+            <div class="tags"><span class="tag">Licensing</span><span class="tag">Compliance</span><span class="tag">English</span></div>
+          </div>
+          <span class="pages">5 pp</span>
+        </div>
+
+        <div class="proj">
+          <span class="idx">08</span>
+          <div>
+            <h3>Private Aviation Operator Shortlist</h3>
+            <p>Twenty-five ranked U.S. and European operators, a recommended first ten targets, six business-model paths, an outreach package, a due-diligence checklist, and the verification questions to ask before any agreement.</p>
+            <div class="tags"><span class="tag">Operator research</span><span class="tag">Shortlist</span><span class="tag">English</span></div>
+          </div>
+          <span class="pages">4 pp</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container-prose">
+        <div class="section-head">
+          <h2>Related working resource</h2>
+          <span class="meta">Live directory</span>
+        </div>
+        <p>The full outreach contact directory compiled from these documents — government, export, recruiting, legal, and regulatory emails — lives on its own page.</p>
+        <p><a class="btn btn-soft" href="fadi-contacts.html">Open the contact directory →</a></p>
+        <p class="boundary-note" style="margin-top:var(--s-4);">
+          Business development and planning support only. Not legal, FAA, securities, or DGCA advice, and not a guarantee of
+          funding, permits, contracts, or licenses. Source documents are confidential and are not hosted here.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div>
+          <div class="brand-block">Mila Boyd</div>
+          <p class="footer-tagline">Rooted design and considered systems. Based in the Pacific Northwest.</p>
+        </div>
+        <div>
+          <h5>Studio</h5>
+          <ul>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="consulting.html">Consulting</a></li>
+            <li><a href="process.html">Process</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Reach</h5>
+          <ul>
+            <li><a href="book.html">Book a Call</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mailto:MilaBoyd1991@gmail.com">MilaBoyd1991@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="legal">
+          <span>© Mila Boyd 2026. All rights reserved.</span>
+          <span>Pacific Northwest</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      var PASS = "money";
+      var KEY = "fadi-projects-unlocked";
+      var body = document.body;
+      var form = document.getElementById("gateForm");
+      var input = document.getElementById("gatePass");
+      var err = document.getElementById("gateError");
+
+      function unlock() {
+        body.classList.remove("locked");
+        body.classList.add("unlocked");
+      }
+
+      // Stay unlocked for the rest of this browser session.
+      try { if (sessionStorage.getItem(KEY) === "1") unlock(); } catch (e) {}
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (input.value === PASS) {
+          try { sessionStorage.setItem(KEY, "1"); } catch (e) {}
+          err.textContent = "";
+          unlock();
+        } else {
+          err.textContent = "Incorrect password. Try again.";
+          input.value = "";
+          input.focus();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
