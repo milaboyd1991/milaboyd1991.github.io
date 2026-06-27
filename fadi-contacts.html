@@ -51,9 +51,40 @@
       border-radius: var(--r-pill); padding: 0.45rem 0.95rem;
     }
     .toc-row a:hover{ color: var(--gold); border-color: var(--gold); }
+
+    /* Password gate */
+    .gate{ position: fixed; inset: 0; z-index: 1000; background: var(--espresso); display: flex; align-items: center; justify-content: center; padding: var(--s-3); }
+    .gate-card{ width: 100%; max-width: 420px; text-align: center; background: var(--cream); border-radius: var(--r-soft); padding: var(--s-6) var(--s-5); }
+    .gate-card .eyebrow{ color: var(--gold); display: block; margin-bottom: var(--s-2); }
+    .gate-card h1{ font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 var(--s-2); }
+    .gate-card p{ color: var(--espresso-soft); font-size: 0.92rem; margin: 0 0 var(--s-4); }
+    .gate-form{ display: flex; flex-direction: column; gap: var(--s-2); }
+    .gate-form input{ font-family: 'Inter', sans-serif; font-size: 1rem; padding: 0.85rem 1rem; border: 1px solid var(--espresso-hair); border-radius: var(--r-soft); background: #fff; color: var(--espresso); text-align: center; letter-spacing: 0.1em; }
+    .gate-form input:focus{ outline: none; border-color: var(--gold); }
+    .gate-error{ color: var(--rose); font-size: 0.82rem; min-height: 1.1em; margin: 0; }
+    body.locked{ overflow: hidden; }
+    #vault{ display: none; }
+    body.unlocked #vault{ display: block; }
+    body.unlocked .gate{ display: none; }
   </style>
 </head>
-<body>
+<body class="locked">
+
+  <!-- ============ PASSWORD GATE ============ -->
+  <div class="gate" id="gate">
+    <div class="gate-card">
+      <span class="eyebrow">Private · Prepared for Fadi</span>
+      <h1>Contact Directory</h1>
+      <p>This page is protected. Enter the password to view the contacts.</p>
+      <form class="gate-form" id="gateForm" autocomplete="off">
+        <input type="password" id="gatePass" placeholder="Password" aria-label="Password" autofocus>
+        <p class="gate-error" id="gateError" role="alert"></p>
+        <button type="submit" class="btn btn-primary">Unlock</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="vault">
 
   <!-- ============ NAV ============ -->
   <nav class="nav">
@@ -350,6 +381,30 @@
     </div>
   </footer>
 
+  </div><!-- /#vault -->
+
   <script src="js/nav.js" defer></script>
+  <script>
+    (function () {
+      var PASS = "money";
+      var KEY = "fadi-contacts-unlocked";
+      var body = document.body;
+      var form = document.getElementById("gateForm");
+      var input = document.getElementById("gatePass");
+      var err = document.getElementById("gateError");
+      function unlock(){ body.classList.remove("locked"); body.classList.add("unlocked"); }
+      try { if (sessionStorage.getItem(KEY) === "1") unlock(); } catch (e) {}
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (input.value === PASS) {
+          try { sessionStorage.setItem(KEY, "1"); } catch (e) {}
+          err.textContent = ""; unlock();
+        } else {
+          err.textContent = "Incorrect password. Try again.";
+          input.value = ""; input.focus();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
